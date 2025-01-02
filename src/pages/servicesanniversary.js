@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Added useState import
+import React, { useState } from "react"; 
 import { useNavigate } from "react-router-dom";
 import ContactPage from "./ContactPage";
 import Weddingcontact from "./weddingcontact";
@@ -25,7 +25,7 @@ const Faq = () => {
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
-      <h2 className="text-2xl font-semibold mb-6 text-rose-900">
+      <h2 className="text-2xl font-semibold mb-6 text-teal-900">
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">
@@ -62,7 +62,8 @@ const Faq = () => {
 };
 
 
-const WeddingNoida = () => {
+const ServicesAnniversary = () => {
+  
   const navigate = useNavigate();
   const features = [
     {
@@ -104,20 +105,20 @@ const WeddingNoida = () => {
   ];
 
   return (
-    <div className="bg-rose-50 text-black py-12">
+    <div className="bg-teal-900 text-black py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-bold mb-6 leading-snug">
             We are the Best <br />
             <span className="text-yellow-400">Destination Wedding</span> <br />
-            Planners in Noida
+            Planners in Delhi NCR
           </h1>
           <p className="text-lg mb-8">
             Your wedding should tell your story, and we at Planners Events are
             here to bring your dream celebration to life with our expertise.
           </p>
-          <button className="bg-yellow-400 text-rose-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500">
+          <button className="bg-yellow-400 text-teal-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500">
             START PLANNING TODAY
           </button>
         </div>
@@ -133,11 +134,11 @@ const WeddingNoida = () => {
       </div>
 
       {/* Content Section */}
-      <div className="bg-white text-rose-900 py-8 px-6 md:px-12 mt-12">
+      <div className="bg-white text-teal-900 py-8 px-6 md:px-12 mt-12">
         <section className="bg-white text-gray-800 py-10">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
-              <h2 className="text-3xl  font-bold text-rose-700 mb-4">
+              <h2 className="text-3xl font-bold text-teal-700 mb-4">
                 Best Wedding Planner in Delhi NCR: Making Every Moment Magical
               </h2>
 
@@ -180,7 +181,7 @@ const WeddingNoida = () => {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h2 className="text-3xl font-bold text-rose-700 mb-4">
+              <h2 className="text-3xl font-bold text-teal-700 mb-4">
                 Why Planners Events is Your Trusted Wedding Planner in Delhi,
                 NCR
               </h2>
@@ -212,7 +213,7 @@ const WeddingNoida = () => {
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-rose-700 mb-6">
+            <h2 className="text-4xl font-bold text-teal-700 mb-6">
               End-to-End Wedding Services: From Planning to Execution
             </h2>
             <p className="text-gray-600 text-lg mb-12">
@@ -226,7 +227,7 @@ const WeddingNoida = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-gray-200 text-rose-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="bg-gray-200 text-teal-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold mb-4">
@@ -240,22 +241,6 @@ const WeddingNoida = () => {
             </div>
           </div>
         </section>
-   
-        {/* Navigation Buttons */}
-        <div className="flex justify-center gap-4 mt-14">
-          <button
-            onClick={() => navigate("/pages/weddingnoida")}
-            className="bg-rose-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-rose-700"
-          >
-            Wedding Planner in Noida
-          </button>
-          <button
-            onClick={() => navigate("/pages/weddinggurgaon")}
-            className="bg-rose-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-rose-700"
-          >
-            Wedding Planner in Gurgaon
-          </button>
-        </div>
       </div>
 
       <Weddingcontact />
@@ -266,4 +251,4 @@ const WeddingNoida = () => {
   );
 };
 
-export default WeddingNoida;
+export default ServicesAnniversary;

@@ -45,7 +45,7 @@ const services = [
   
 const ServicesPage = () => {
   return (
-    <div className="bg-green-900 py-10">
+    <div className="bg-rose-900 py-10">
       <div className="container mx-auto px-6">
         <h1 className="text-center text-white text-4xl font-bold mb-12">
           Wedding Services
@@ -57,7 +57,7 @@ const ServicesPage = () => {
               key={index}
               className="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between h-full"
             >
-              <h2 className="text-green-700 text-2xl font-semibold mb-4">
+              <h2 className="text-rose-700 text-2xl font-semibold mb-4">
                 {service.title}
               </h2>
               <p className="text-gray-600 mb-4">{service.description}</p>
@@ -79,7 +79,7 @@ const ServicesPage = () => {
               key={index}
               className="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between h-full"
             >
-              <h2 className="text-green-700 text-2xl font-semibold mb-4">
+              <h2 className="text-rose-700 text-2xl font-semibold mb-4">
                 {service.title}
               </h2>
               <p className="text-gray-600 mb-4">{service.description}</p>

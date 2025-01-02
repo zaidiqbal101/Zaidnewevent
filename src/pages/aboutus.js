@@ -16,17 +16,22 @@ const About = () => {
 
         {/* Right side: Content */}
         <div className="w-1/2">
-          <h1 className="text-4xl font-bold text-green-900 mb-6">About Planners Events</h1>
-          <p className="text-xl text-gray-700 mb-8">Architects of Everlasting Memories!</p>
+          <h1 className="text-4xl font-bold text-rose-900 mb-6">About Planners Events</h1>
+          <p className="text-xl text-gray-700 mb-8">Creators of Timeless Celebrations!</p>
           <div className="max-w-3xl">
             <p className="text-lg text-gray-600 mb-6">
-              Welcome to Planners Events, your dedicated partner in crafting unforgettable moments. In a world bustling with time constraints, we specialize in turning your visions into reality. Our seasoned event planners meticulously handle every detail, from concept to execution, offering a seamless experience.
+            Welcome to [......] Events, your trusted partner in designing extraordinary moments. 
+            In today’s fast-paced world, we bring your dreams to life with precision and care. 
+            Our experienced team of event planners manages every aspect, from concept to execution, ensuring a hassle-free journey.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              Whether it's a wedding or a social gathering, we tailor our services to suit your unique preferences and needs. With a commitment to excellence, creativity, and professionalism, Planners Events transforms your ideas into spectacular events.
+            Whether it’s a grand wedding or an intimate gathering, we tailor 
+            our services to reflect your style and meet your needs. With a
+             passion for excellence, creativity, and attention to detail, [....] 
+             Events turns your vision into a breathtaking reality.
             </p>
             <p className="text-lg text-gray-600">
-              Let us handle the intricacies, allowing you to savor every moment of your special occasion. Your dream event starts here with Planners Events.
+            Let us take care of the complexities while you relish every cherished moment of your celebration. Your perfect event begins with [....] Events.
             </p>
           </div>
         </div>

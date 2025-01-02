@@ -39,7 +39,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#2F6158] flex">
+    <div className="min-h-screen bg-rose-50 flex">
       {/* Left Side Content */}
       <div className="w-1/2 p-12 text-white flex justify-center items-center">
         {/* Contact Info */}
@@ -48,13 +48,13 @@ const ContactPage = () => {
             Let's Talk About Your Event
           </h1>
           
-          <p className="mb-8 text-lg">
+          <p className="mb-8 text-lg text-black">
             If you have any query or would like more information on<br />
             our works, kindly fill the form and we’ll aim<br />
             to get back to you within 24 hours.
           </p>
 
-          <div className="space-y-4 text-yellow-400">
+          <div className="space-y-4 text-yellow-600">
             <div>
               +91 96503 98807<br />
               +91 9999988014
@@ -164,7 +164,7 @@ const ContactPage = () => {
 
             <button 
               type="submit"
-              className="bg-[#2F6158] text-white px-8 py-2 rounded hover:bg-[#3E7268] transition-colors"
+              className="bg-rose-900 text-white px-8 py-2 rounded hover:bg-[#3E7268] transition-colors"
             >
               Submit
             </button>

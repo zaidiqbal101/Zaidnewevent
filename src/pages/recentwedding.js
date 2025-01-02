@@ -32,7 +32,7 @@ const RecentWeddings = () => {
   return (
     <div className="bg-white py-10">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-800">
+        <h1 className="text-4xl text-rose-900 font-bold text-gray-800">
           Our Recent Weddings in Delhi, Noida, and Gurgaon
         </h1>
         <p className="text-lg text-gray-600 mt-2">

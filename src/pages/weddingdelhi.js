@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ContactPage from "./ContactPage";
 import Weddingcontact from "./weddingcontact";
@@ -25,15 +25,20 @@ const Faq = () => {
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
-      <h2 className="text-2xl font-semibold mb-6 text-teal-900">
+      <h2 className="text-2xl text-rose-900 font-semibold mb-6 text-teal-900">
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">
         {questions.map((question, index) => (
-          <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+          <div
+            key={index}
+            className="border border-gray-200 rounded-lg overflow-hidden"
+          >
             <button
               className="flex items-center justify-between w-full p-4 bg-white hover:bg-gray-100"
-              onClick={() => setActiveIndex(index === activeIndex ? null : index)}
+              onClick={() =>
+                setActiveIndex(index === activeIndex ? null : index)
+              }
             >
               <span>{question}</span>
               <svg
@@ -61,10 +66,18 @@ const Faq = () => {
   );
 };
 
-
 const WeddingDelhi = () => {
-  
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    location: "",
+    eventType: "",
+  });
+  const eventTypes = ["Wedding", "Birthday", "Corporate Event", "Baby Shower"];
+
   const features = [
     {
       icon: "📋", // Replace with an icon or use libraries like Heroicons
@@ -103,9 +116,18 @@ const WeddingDelhi = () => {
         "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
     },
   ];
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data Submitted:", formData);
+    setIsModalOpen(false);
+  };
   return (
-    <div className="bg-teal-900 text-black py-12">
+    <div className="bg-rose-50 text-black py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -118,7 +140,10 @@ const WeddingDelhi = () => {
             Your wedding should tell your story, and we at Planners Events are
             here to bring your dream celebration to life with our expertise.
           </p>
-          <button className="bg-yellow-400 text-teal-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-yellow-400 text-teal-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500"
+          >
             START PLANNING TODAY
           </button>
         </div>
@@ -132,33 +157,134 @@ const WeddingDelhi = () => {
           />
         </div>
       </div>
-
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg w-96">
+            <h2 className="text-2xl font-semibold mb-4">Plan Your Wedding</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">
+                  Location
+                </label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+          <label className="block text-sm font-medium mb-1">Date</label>
+          <input
+            type="date"
+            name="eventDate"
+            value={formData.eventDate}
+            onChange={handleInputChange}
+            className="w-full border border-gray-300 rounded-md px-3 py-2"
+            required
+          />
+        </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">
+                  Event Type
+                </label>
+                <select
+                  name="eventType"
+                  value={formData.eventType}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                >
+                  <option value="" disabled>
+                    Select an event type
+                  </option>
+                  {eventTypes.map((event, index) => (
+                    <option key={index} value={event}>
+                      {event}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex justify-end gap-4">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(false)}
+                  className="bg-gray-200 px-4 py-2 rounded-md"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="bg-teal-900 text-white px-4 py-2 rounded-md"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
       {/* Content Section */}
       <div className="bg-white text-teal-900 py-8 px-6 md:px-12 mt-12">
         <section className="bg-white text-gray-800 py-10">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold text-teal-700 mb-4">
+              <h2 className="text-3xl font-bold text-rose-700 mb-4">
                 Best Wedding Planner in Delhi NCR: Making Every Moment Magical
               </h2>
 
               <p className="mb-4 leading-relaxed">
-                Welcome to Planners Events, One of the best wedding planners in
-                Delhi-NCR. We’re here to help you create the wedding of your
-                dreams. Our team focuses on turning your special day into a
-                memorable celebration filled with joy and love. With careful
-                planning and attention to detail, we make sure everything runs
-                smoothly at some of the best venues in Delhi. Many of us start
-                fantasizing about our big day long before we truly understand
-                what marriage is all about. The dress, the makeup, the parties,
-                and the decorations that send our hearts pounding come first. We
-                know that everyone has their own unique story, and we’re
-                dedicated to designing a wedding that truly reflects who you
-                are. Our friendly team closely works with you to understand your
-                ideas and bring them to life in a beautiful way. From intimate
-                gatherings to grand celebrations, we tailor every element to
-                make your wedding unforgettable. Trust us to manage the stress
-                so you can focus on cherishing every moment of your big day.
+                Welcome to Planners Events, One of the best wedding planners in       
+                Delhi-NCR. We’re here to help you create the wedding of your        
+                dreams. Our team focuses on turning your special day into a        
+                memorable celebration filled with joy and love. With careful        
+                planning and attention to detail, we make sure everything runs        
+                smoothly at some of the best venues in Delhi. Many of us start        
+                fantasizing about our big day long before we truly understand       
+                what marriage is all about. The dress, the makeup, the parties,       
+                and the decorations that send our hearts pounding come first. We        
+                know that everyone has their own unique story, and we’re        
+                dedicated to designing a wedding that truly reflects who you        
+                are. Our friendly team closely works with you to understand your        
+                ideas and bring them to life in a beautiful way. From intimate        
+                gatherings to grand celebrations, we tailor every element to        
+                make your wedding unforgettable. Trust us to manage the stress        
+                so you can focus on cherishing every moment of your big day.        
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
@@ -181,7 +307,7 @@ const WeddingDelhi = () => {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h2 className="text-3xl font-bold text-teal-700 mb-4">
+              <h2 className="text-3xl font-bold text-rose-700 mb-4">
                 Why Planners Events is Your Trusted Wedding Planner in Delhi,
                 NCR
               </h2>
@@ -213,7 +339,7 @@ const WeddingDelhi = () => {
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-teal-700 mb-6">
+            <h2 className="text-4xl font-bold text-rose-700 mb-6">
               End-to-End Wedding Services: From Planning to Execution
             </h2>
             <p className="text-gray-600 text-lg mb-12">
@@ -227,7 +353,7 @@ const WeddingDelhi = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-gray-200 text-teal-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="bg-rose-100 text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold mb-4">
@@ -241,18 +367,18 @@ const WeddingDelhi = () => {
             </div>
           </div>
         </section>
-   
+
         {/* Navigation Buttons */}
         <div className="flex justify-center gap-4 mt-14">
           <button
             onClick={() => navigate("/pages/weddingnoida")}
-            className="bg-teal-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-teal-700"
+            className="bg-rose-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-teal-700"
           >
             Wedding Planner in Noida
           </button>
           <button
             onClick={() => navigate("/pages/weddinggurgaon")}
-            className="bg-teal-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-teal-700"
+            className="bg-rose-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-teal-700"
           >
             Wedding Planner in Gurgaon
           </button>
@@ -261,9 +387,8 @@ const WeddingDelhi = () => {
 
       <Weddingcontact />
       <RecentWeddings />
-      <Faq /> 
+      <Faq />
     </div>
-     
   );
 };
 

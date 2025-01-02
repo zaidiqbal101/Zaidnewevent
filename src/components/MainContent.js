@@ -1,12 +1,14 @@
 import React from "react";
 import Slider from "react-slick"; // Import react-slick
-import WeddingTimeline from './WeddingTimeline'; 
+
+import WeddingTimeline from "./WeddingTimeline";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 const events = [
   {
     title: "Birthday",
     image: "assets/birthdayf.png",
+    
   },
   {
     title: "Anniversary",
@@ -29,7 +31,7 @@ const events = [
     image: "path_to_retirement_party_image.jpg",
   },
 ];
- 
+
 const EventServices = () => {
   return (
     <div className="bg-gray-100 py-10">
@@ -38,7 +40,8 @@ const EventServices = () => {
           Event Services By Planners Events
         </h1>
         <p className="text-lg text-gray-600 mt-2">
-          Discover a wide range of event solutions designed to make every occasion special.
+          Discover a wide range of event solutions designed to make every
+          occasion special.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-10">
@@ -52,7 +55,7 @@ const EventServices = () => {
               alt={event.title}
               className="w-full h-72 object-cover"
             />
-            <div className="bg-green-800 text-white text-center py-2">
+            <div className="bg-rose-300 text-black text-center py-2">
               <h2 className="text-lg font-medium">{event.title}</h2>
             </div>
           </div>
@@ -61,7 +64,7 @@ const EventServices = () => {
     </div>
   );
 };
- 
+
 const MainContent = () => {
   // Settings for the carousel
   const settings = {
@@ -73,92 +76,98 @@ const MainContent = () => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 2000, // Autoplay interval in milliseconds
   };
- 
+
   const features = [
     {
-      icon: "📋", // Replace with an icon or use libraries like Heroicons
-      title: "Stress-Free Event Planning and Execution",
+      icon: "📋",
+      title: "Effortless Event Planning",
       description:
-        "From setup to logistics, we have got everything covered. As experienced event managers, we ensure seamless event delivery and coordination, leaving you to focus on enjoying your special day, while we take care of all the hustle and bustle.",
+        "Relax and enjoy your special moments while we take care of every detail. From setup to execution, our team ensures a flawlessly coordinated event experience.",
+      borderColor: "border-rose-500  bg-rose-50 text-black",
     },
-    {  
+    {
       icon: "💰",
-      title: "Budget-Friendly Event Planning",
+      title: "Affordable Event Solutions",
       description:
-        "Our event management company, Planners Events, is dedicated to working within your budget. We'll handle every detail, from initial planning to post-event. Our knowledge and negotiation skills guarantee the best rates and efficient management of costs, ensuring a stress-free experience.",
+        "We design and execute events that fit your budget, combining smart planning and expert negotiation to deliver exceptional value without compromising quality",
+      borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
       icon: "👥",
-      title: "Experienced Team",
+      title: "Experienced Professionals",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
+        "With  years of expertise, our team is equipped to handle all the challenges of event management, ensuring your celebration is stress-free and memorable",
+      borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
       icon: "📊",
-      title: "Budget Setting and Management",
+      title: "Transparent Budget Management",
       description:
-        "We keep you through the budget-setting process, ensuring it aligns with your vision and everything is transparent. Our knowledge of event trends allows us to recommend creative ideas that fit your theme and budget.",
+        "We help you set a budget that aligns with your vision and maintain full transparency, ensuring you get the most value out of your investment.",
+      borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
       icon: "🎨",
-      title: "Personalized Experience",
+      title: "Custom-Crafted Events",
       description:
-        "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
+        "Every event is designed to reflect your unique style and preferences. We work closely with you to bring your vision to life, creating unforgettable experiences.",
+      borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
       icon: "🎨",
-      title: "Personalized Experience",
+      title: "Tailored Event Experiences",
       description:
-        "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
+        "Our personalized approach ensures every detail of your event resonates with your personality, leaving you and your guests with cherished memories.",
+      borderColor: "border-rose-500  bg-rose-50 text-black",
     },
   ];
- 
+
   const excellence = [
     {
       icon: "📋",
-      title: "Venue",
+      title: "Venue Selection",
       description:
-        "We're dedicated to matching your preferences and budget with the perfect venue.We assist in perfect visits,secure packages,and provide details for easy shortlisting.",
-    },
+        "We specialize in finding venues that perfectly match your style, preferences, and budget. From arranging seamless site visits to securing exclusive packages, we simplify the process to help you shortlist the ideal location.",
+      
+      },
     {
       icon: "💰",
-      title: "Catering",
+      title: "Catering Services",
       description:
-        "If your selected venue permits external caterers, we can organize a top-notch catering service for you. We also aid in crafting a menu tailored to your budget and preferences.",
+        "If your chosen venue allows external catering, we’ll arrange a top-tier service that suits your event. Our team works with you to craft a menu that aligns with your taste and budget, ensuring a delectable dining experience.",
     },
     {
       icon: "👥",
-      title: "Decorations",
+      title: "Event Decorations",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
+        "Our creative team transforms your vision into reality with stunning decorations tailored to your theme. With over 15 years of experience, we handle every detail to ensure a flawless and visually captivating event.",
     },
     {
       icon: "📊",
-      title: "Guest Management",
+      title: "Guest Coordination",
       description:
-        "We keep you through the budget-setting process, ensuring it aligns with your vision and everything is transparent. Our knowledge of event trends allows us to recommend creative ideas that fit your theme and budget.",
+        "We make guest management effortless, from maintaining a clear budget to aligning with your event’s theme. Our expertise helps recommend innovative ideas and ensures seamless coordination throughout your celebration.",
     },
     {
       icon: "🎨",
-      title: "Gifts & Hamper",
+      title: "Gifting & Hampers",
       description:
-        "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
+        "Delight your guests with thoughtfully curated gifts and hampers. We work closely with you to create unique, personalized keepsakes that leave a lasting impression on everyone attending your event.",
     },
     {
       icon: "🎨",
-      title: "Transportation",
+      title: "Transportation Services",
       description:
-        "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
+        "From guest pickups to event logistics, we provide reliable and efficient transportation services. Our focus is on ensuring a smooth journey for you and your attendees, making your event stress-free and enjoyable.",
     },
-  
   ];
- 
+
   return (
     <main className="flex-1 text-white  ">
       <section>
         <div className="   text-center">
           {/* Carousel component */}
-          <Slider  className = "max-h-full h-full w-[100%]" {...settings}>
+          <Slider className="max-h-full h-full w-[100%]" {...settings}>
             <div>
               <img
                 src="/assets/pic1.png" // Correct path to the image
@@ -183,107 +192,86 @@ const MainContent = () => {
           </Slider>
         </div>
       </section>
-   
-      {/* Design Content Section */}
+
+      {/* Design Merged Content Section */}
       <section className="bg-white text-gray-800 py-10">
         <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
+          {/* Text Content */}
           <div className="md:w-2/3">
-            <h2 className="text-3xl font-bold text-teal-700 mb-4">
-              Best Wedding and Event Management Company In Delhi NCR
+            <h2 className="text-3xl font-bold text-rose-700 mb-4">
+              Top Wedding and Event Management Company in Delhi NCR
             </h2>
             <h3 className="text-xl font-semibold mb-6">
               Planners Events: Best Event Planners in Delhi NCR, India
             </h3>
             <p className="mb-4 leading-relaxed">
-              We believe every celebration deserves to be unique and memorable. Whether it’s a
-              wedding, birthday party, anniversary, or corporate event at Planners Events, we bring
-              creativity and professionalism to every project. As the best event planners in Delhi
-              with 15+ years of experience, we excel in delivering exceptional event management
-              services in Delhi NCR & across India.
+              Every celebration deserves to be extraordinary and unforgettable.
+              At Planners Events, we specialize in making weddings, birthday
+              parties, anniversaries, and corporate events truly remarkable with
+              our creativity and professionalism. With over years of experience,
+              we are recognized as the leading event planners in Delhi,
+              delivering outstanding event management services in Delhi NCR and
+              across India.
             </p>
             <p className="mb-4 leading-relaxed">
-              Our event management services are customized to fit your particular preferences and
-              budgetary limitations, ensuring a stress-free and seamless event. We can assist you at
-              every stage, whether you’re looking for an event management company in Delhi. Our
-              committed staff of event planners take care of every detail from the very beginning to
-              the very end, so you can concentrate on what really counts—enjoying the occasion with
-              your loved ones.
+              We take pride in going above and beyond to make your celebrations
+              truly exceptional. By partnering with trusted vendors and
+              leveraging the expertise of our skilled event team, we deliver
+              outstanding planning services tailored to your unique vision and
+              budget. Whether you envision an intimate gathering in a
+              picturesque local setting or a lavish celebration in an exquisite
+              international location, we ensure your event is unforgettable and
+              cherished by your guests.
             </p>
-            <button className="bg-teal-700 text-white px-6 py-2 rounded hover:bg-teal-800">
-              Let’s Connect
+            <p className="mb-4 leading-relaxed">
+              As a leading event planner in Delhi and a trusted name in event
+              management, we prioritize excellence and creativity in every
+              detail. Our team is committed to turning your dreams into reality,
+              understanding that every element matters. When you choose us as
+              your event planner, you can rest assured that every aspect of your
+              special occasion will be handled with precision and care. While we
+              work behind the scenes to create lasting memories, you can focus
+              on enjoying your celebration to the fullest!
+            </p>
+            <button className="bg-rose-700 text-white px-6 py-2 rounded hover:bg-rose-800">
+              Contact Us
             </button>
           </div>
-          <div className="md:w-1/3 mt-8 md:mt-0">
+
+          {/* Image Content */}
+          <div className="md:w-1/3 mt-8 md:mt-0 flex flex-col space-y-4">
             <img
               src="/assets/pic4.png"
               alt="Event Planner"
-              className="rounded-lg shadow-lg h-96 object-cover"
+              className="rounded-lg shadow-lg h-96  w-auto mx-auto object-cover transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
             />
           </div>
         </div>
       </section>
- 
-      {/* Design Content Section 2 */}
-      <section className="bg-white text-gray-800 py-10">
-        <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
-          <div className="md:w-2/3">
-            <h2 className="text-3xl font-bold text-teal-700 mb-4">
-              Experienced Event Management Team To Add A
-              Unique Touch That Reflects Your Style
-            </h2>
- 
-            <p className="mb-4 leading-relaxed">
-              At our core, we truly enjoy going the extra mile to make your celebrations and
-              gatherings unique. We collaborate with trusted vendors and rely on our skilled event
-              team to provide outstanding planning services that cater to your particular vision and
-              budget limitations because we recognize how significant these occasions are. We can
-              help you create memorable arrangements that your guests will love, whether your vision
-              is for a small, intimate party in a beautiful local setting or a grand celebration in a
-              stunning international location.
-            </p>
-            <p className="mb-4 leading-relaxed">
-              As one of Delhi’s top event planners and an established event management company, we
-              put a high value on excellence and originality in all that we do. Our staff is
-              dedicated to realizing your dreams because we understand that every little detail
-              matters. You can relax knowing that we will carefully and meticulously manage every
-              element of your special occasion when you select us as your local event planner. While
-              we work behind the scenes to create lifelong memories, we want you to enjoy your
-              celebration to the fullest!
-            </p>
-            <button className="bg-teal-700 text-white px-6 py-2 rounded hover:bg-teal-800">
-              Let’s Connect
-            </button>
-          </div>
-          <div className="md:w-1/3 mt-8 md:mt-0">
-            <img
-              src="/assets/pic5.png"
-              alt="Event Planner"
-              className="rounded-lg shadow-lg h-96 object-cover"
-            />
-          </div>
-        </div>
-      </section>
- 
+
       {/* Why Choose Us Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-teal-700 mb-6">
-            Why Choose Planners Events for Your Celebration?
+          <h2 className="text-4xl font-bold text-rose-700 mb-6">
+          "Why Trust Planners Events for Your Special Occasions?"
           </h2>
           <p className="text-gray-600 text-lg mb-12">
-            Being the Best Social Events Organizers in Delhi, Planners Event Aims
-            To Craft Extraordinary Social Events Tailored To Your Vibrant Spirit.
+          As premier social event organizers in Delhi, Planners Events is dedicated to
+           creating unforgettable experiences tailored to your unique vision and vibrant 
+           personality. Let us transform your celebrations into extraordinary moments.
+
+
           </p>
- 
+
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-teal-700 text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                className={`p-6 rounded-lg shadow-md border-l-4 ${feature.borderColor}`}
               >
-                {/*Icon*/}
+                {/* Icon */}
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 {/* Title */}
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
@@ -294,48 +282,57 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-        {/* Event Services Section */}
-        <EventServices />
-        <WeddingTimeline />
-        {/*Event Excelence Record starts here */ }
+
+      {/* Event Services Section */}
+      <EventServices />
+      <WeddingTimeline />
+      {/*Event Excelence Record starts here */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-teal-700 mb-6">
-          Event Excellence Redefined
+          <h2 className="text-4xl font-bold text-rose-700 mb-6">
+            Event Excellence Redefined
           </h2>
           <p className="text-gray-600 text-lg mb-12">
-          From intimate gatherings to grand celebrations, we ensure every detail is perfect. Experience seamless planning and unforgettable moments with us.
+            From intimate gatherings to grand celebrations, we ensure every
+            detail is perfect. Experience seamless planning and unforgettable
+            moments with us.
           </p>
- 
+
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {excellence.map((excellent, index) => (
               <div
                 key={index}
-                className="bg-teal-700 text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                className="bg-rose-100 text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
                 {/*Icon*/}
                 <div className="text-4xl mb-4">{excellent.icon}</div>
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-4">{excellent.title}</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  {excellent.title}
+                </h3>
                 {/* Description */}
-                <p className="text-sm leading-relaxed">{excellent.description}</p>
+                <p className="text-sm leading-relaxed">
+                  {excellent.description}
+                </p>
               </div>
             ))}
           </div>
           <div className="mt-8">
-            <Link to="/aboutus" className="bg-teal-700 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-teal-800 transition duration-300">
-           Know More
+            <Link
+              to="/aboutus"
+              className="bg-rose-700 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+            >
+              Know More
             </Link>
           </div>
         </div>
       </section>
-      {/*Event Excelence Record ends here */ }
+      {/*Event Excelence Record ends here */}
       {/* <Testimonials/> */}
- 
     </main>
   );
 };
- 
+
 export default MainContent;

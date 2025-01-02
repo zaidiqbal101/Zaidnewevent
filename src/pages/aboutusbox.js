@@ -32,7 +32,7 @@ const AboutUsBox = () => {
     <section className="bg-white py-16">
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-teal-700 mb-6">
+        <h2 className="text-4xl font-bold text-rose-700 mb-6">
           What sets us apart from others
         </h2>
         <p className="text-gray-600 text-lg mb-12">
@@ -45,7 +45,7 @@ const AboutUsBox = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-teal-700 text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              className="bg-rose-100 text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
             >
               {/* Icon */}
               <div className="text-4xl mb-4">{feature.icon}</div>

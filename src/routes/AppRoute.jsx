@@ -14,7 +14,8 @@ import WeddingGurgaon from "../pages/weddinggurgaon";
 import Birthdaydelhi from "../pages/birthdaydelhi";
 import Birthdaygurgaon from "../pages/birthdaygurgaon";
 import Birthdaynoida from "../pages/birthdaynoida";
-import Anniversary from "../pages/anniversary";
+// import Anniversary from "../pages/servicesanniversary";
+import ServicesAnniversary from "../pages/servicesanniversary";
 
 const AppRoute = () => {
   return (
@@ -34,7 +35,7 @@ const AppRoute = () => {
         <Route path="/birthdaydelhi"  element={<Birthdaydelhi/>} /> 
         <Route path="/birthdaygurgaon"  element={<Birthdaygurgaon/>} /> 
         <Route path="/birthdaynoida" element={<Birthdaynoida/>}/>
-        <Route path="/anniversary" element={<Anniversary/>}/>
+        <Route path="/servicesanniversary" element={<ServicesAnniversary/>}/>
 
       </Routes>
       <Footer />

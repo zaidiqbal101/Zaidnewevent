@@ -34,7 +34,7 @@ const Gallery = () => {
     <div className="bg-gray-100 py-10">
       {/* Title Section */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-800">Gallery</h1>
+        <h1 className="text-4xl text-rose-900 font-bold text-gray-800">Gallery</h1>
         <p className="text-lg text-gray-600 mt-2">
           Dedicated to creating lasting memories, we prioritize your special day’s significance.
           Trust us to exceed expectations, cherishing every moment with you.
@@ -53,6 +53,7 @@ const Gallery = () => {
               src={item.image}
               alt={"Gallery Image " + (index + 1)}  // Added fallback for alt text
               className="w-full h-72 object-cover cursor-pointer"
+
               onClick={() => openModal(item.image)}  // Open the modal on click
             />
           </div>
@@ -61,7 +62,7 @@ const Gallery = () => {
 
       {/* Message Section */}
       <div className="text-center mt-10 text-lg">
-        <p className="text-green-900 font-bold">
+        <p className="text-rose-900 font-bold">
           In every captured moment, we find stories waiting to be discovered. We hope our gallery has ignited your imagination and left a lasting impression.
         </p>
       </div>
