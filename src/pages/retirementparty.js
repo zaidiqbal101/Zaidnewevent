@@ -66,7 +66,7 @@ const Faq = () => {
   );
 };
 
-const WeddingNoida = () => {
+const RetirementParty = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -132,9 +132,9 @@ const WeddingNoida = () => {
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-bold mb-6 leading-snug">
-            We are the Best <br />
-            <span className="text-yellow-400">Destination Wedding</span> <br />
-            Planners in Noida
+           Retirement Party <br />
+
+            Planners in Delhi NCR
           </h1>
           <p className="text-lg mb-8">
             Your wedding should tell your story, and we at Planners Events are
@@ -265,16 +265,16 @@ const WeddingNoida = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Best Wedding Planner in Noida : Making Every Moment Magical
+                Best Wedding Planner in Delhi NCR: Making Every Moment Magical
               </h2>
 
               <p className="mb-4 leading-relaxed">
                 Welcome to Planners Events, One of the best wedding planners in
-                Noida. We’re here to help you create the wedding of your
+                Delhi-NCR. We’re here to help you create the wedding of your
                 dreams. Our team focuses on turning your special day into a
                 memorable celebration filled with joy and love. With careful
                 planning and attention to detail, we make sure everything runs
-                smoothly at some of the best venues in Noida. Many of us start
+                smoothly at some of the best venues in Delhi. Many of us start
                 fantasizing about our big day long before we truly understand
                 what marriage is all about. The dress, the makeup, the parties,
                 and the decorations that send our hearts pounding come first. We
@@ -308,12 +308,12 @@ const WeddingNoida = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Why Planners Events is Your Trusted Wedding Planner in Noida,
+                Why Planners Events is Your Trusted Wedding Planner in Delhi,
                 NCR
               </h2>
               <p className="mb-4 leading-relaxed">
                 We take pride in having a thorough understanding of the finest
-                wedding venues in Noida , ensuring you find the perfect
+                wedding venues in Delhi NCR, ensuring you find the perfect
                 location for your love story. Whether you imagine an intimate
                 get-together or a lavish destination wedding in India, we
                 customize each detail to capture your own personality and sense
@@ -330,7 +330,7 @@ const WeddingNoida = () => {
               </p>
               <p className="mb-4 leading-relaxed">
                 With our expertise as some of the best wedding planners in
-                Noida, we ensure that your special day is not only beautiful but
+                Delhi, we ensure that your special day is not only beautiful but
                 also a true reflection of your story.
               </p>
             </div>
@@ -392,4 +392,4 @@ const WeddingNoida = () => {
   );
 };
 
-export default WeddingNoida;
+export default RetirementParty;

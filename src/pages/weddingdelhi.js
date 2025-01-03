@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import ContactPage from "./ContactPage";
 import Weddingcontact from "./weddingcontact";
 import RecentWeddings from "./recentwedding";
-
+import { Link } from "react-router-dom";
+import axios from 'axios';
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -75,12 +76,14 @@ const WeddingDelhi = () => {
     email: "",
     location: "",
     eventType: "",
+    date: '',
+    isRobot: false,
   });
   const eventTypes = ["Wedding", "Birthday", "Corporate Event", "Baby Shower"];
 
   const features = [
     {
-      icon: "📋", // Replace with an icon or use libraries like Heroicons
+      icon: "📋", 
       title: "Venue Selection",
       description:
         "We give you access to a huge range of stunning settings that suit your tastes and style. Our staff will assist you in locating the ideal setting for the perfect wedding.",
@@ -116,16 +119,33 @@ const WeddingDelhi = () => {
         "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
     },
   ];
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    setIsModalOpen(false);
+  const handleCheckboxChange = () => {
+    setFormData({
+      ...formData,
+      isRobot: !formData.isRobot
+    });
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData); // Handle form submission logic here
+
+    const response = axios.post('http://localhost:1200/submit', formData);
+    response.then(response => {
+      console.log('Success:', response.data);
+    }).catch(error => {
+      console.error('Error:', error);
+    });
+  };
+
+  
   return (
     <div className="bg-rose-50 text-black py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
@@ -160,7 +180,7 @@ const WeddingDelhi = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg w-96">
+          <div className="bg-white p-6 rounded-lg w-full md:w-[40rem] lg:w-[50rem]">
             <h2 className="text-2xl font-semibold mb-4">Plan Your Wedding</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
@@ -210,16 +230,16 @@ const WeddingDelhi = () => {
                 />
               </div>
               <div className="mb-4">
-          <label className="block text-sm font-medium mb-1">Date</label>
-          <input
-            type="date"
-            name="eventDate"
-            value={formData.eventDate}
-            onChange={handleInputChange}
-            className="w-full border border-gray-300 rounded-md px-3 py-2"
-            required
-          />
-        </div>
+                <label className="block text-sm font-medium mb-1">Date</label>
+                <input
+                  type="date"
+                  name="eventDate"
+                  value={formData.eventDate}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
                   Event Type
@@ -269,22 +289,22 @@ const WeddingDelhi = () => {
               </h2>
 
               <p className="mb-4 leading-relaxed">
-                Welcome to Planners Events, One of the best wedding planners in       
-                Delhi-NCR. We’re here to help you create the wedding of your        
-                dreams. Our team focuses on turning your special day into a        
-                memorable celebration filled with joy and love. With careful        
-                planning and attention to detail, we make sure everything runs        
-                smoothly at some of the best venues in Delhi. Many of us start        
-                fantasizing about our big day long before we truly understand       
-                what marriage is all about. The dress, the makeup, the parties,       
-                and the decorations that send our hearts pounding come first. We        
-                know that everyone has their own unique story, and we’re        
-                dedicated to designing a wedding that truly reflects who you        
-                are. Our friendly team closely works with you to understand your        
-                ideas and bring them to life in a beautiful way. From intimate        
-                gatherings to grand celebrations, we tailor every element to        
-                make your wedding unforgettable. Trust us to manage the stress        
-                so you can focus on cherishing every moment of your big day.        
+                Welcome to Planners Events, One of the best wedding planners in
+                Delhi-NCR. We’re here to help you create the wedding of your
+                dreams. Our team focuses on turning your special day into a
+                memorable celebration filled with joy and love. With careful
+                planning and attention to detail, we make sure everything runs
+                smoothly at some of the best venues in Delhi. Many of us start
+                fantasizing about our big day long before we truly understand
+                what marriage is all about. The dress, the makeup, the parties,
+                and the decorations that send our hearts pounding come first. We
+                know that everyone has their own unique story, and we’re
+                dedicated to designing a wedding that truly reflects who you
+                are. Our friendly team closely works with you to understand your
+                ideas and bring them to life in a beautiful way. From intimate
+                gatherings to grand celebrations, we tailor every element to
+                make your wedding unforgettable. Trust us to manage the stress
+                so you can focus on cherishing every moment of your big day.
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
@@ -370,12 +390,12 @@ const WeddingDelhi = () => {
 
         {/* Navigation Buttons */}
         <div className="flex justify-center gap-4 mt-14">
-          <button
-            onClick={() => navigate("/pages/weddingnoida")}
-            className="bg-rose-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-teal-700"
-          >
-            Wedding Planner in Noida
-          </button>
+        <Link
+              to="/weddingnoida"
+              className="bg-rose-700 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+            >
+              Wedding Planner In Noida
+            </Link>
           <button
             onClick={() => navigate("/pages/weddinggurgaon")}
             className="bg-rose-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-teal-700"

@@ -183,22 +183,7 @@ const Header = () => {
                         Retirement Party
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/coupleproposals"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Couple Proposals
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/naamkaranceremony"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Naamkaran Ceremony
-                      </a>
-                    </li>
+                   
                     <li>
                       <a
                         href="/themeparty"
@@ -217,7 +202,7 @@ const Header = () => {
                     </li>
                     <li>
                       <a
-                        href="/alumnimeet"
+                        href="/AlumuniMeet"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
                         Alumni Meet

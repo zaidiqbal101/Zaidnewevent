@@ -2,44 +2,44 @@ import React from "react";
 
 const services = [
     {
-      title: "Venue",
+      title: "Wedding Venue Selection",
       description:
-        "The Events Planning Team is dedicated to helping you discover a wedding venue that aligns with both your preferences and budget. We guide you through visits to selected properties and support you in securing the best package for your chosen venue. If you prefer, you can inquire about property details from our team members and create a shortlist before scheduling visits.",
+        "Our Events Planning Team specializes in helping you find the perfect wedding venue that suits your style and budget. We assist with site visits and help negotiate the best deals for your chosen location. Alternatively, you can consult with our team to gather property details, create a shortlist, and schedule visits at your convenience.",
     },
     {
-      title: "Catering",
+      title: "Customized Catering Services",
       description:
-        "If your chosen venue permits external catering, we can arrange an excellent caterer for your event. Our services extend to helping you finalize a wedding menu that aligns with both your budget and culinary preferences. Trust us to ensure a delightful dining experience that complements the uniqueness of your special day.",
+        "If your venue allows external catering, we can connect you with exceptional caterers for your event. We’ll work with you to design a wedding menu that meets your budget and taste preferences, ensuring a delightful dining experience that complements your special day.",
     },
     {
-      title: "Decorations",
+      title: "Theme-Based Decorations",
       description:
-        "Our meticulous event decoration services ensure a flawless alignment with your chosen theme. From color-coordinated decor to carefully selected flowers, every detail reflects and enhances your vision. We take pride in planning and executing ceremonies and events with precision, creating a seamless and visually captivating experience for all.",
+        "Our decoration services are crafted to perfectly match your chosen theme, down to the finest detail. From color schemes to floral arrangements, we ensure every element enhances your vision, delivering ceremonies and events that are visually stunning and flawlessly executed.",
     },
     {
-      title: "Guest Management",
+      title: "Comprehensive Guest Management",
       description:
-        "From their arrival to departure, we meticulously handle every aspect of your guests' experience throughout the entire event. Our dedicated guest management services ensure that you can relax and enjoy the celebration, confident that your guests are well taken care of with seamless attention to detail and hospitality.",
+        "We take care of every detail of your guests' experience, from their arrival to departure. With our professional guest management services, you can relax and enjoy the event, knowing your guests are in good hands and being treated with exceptional care and hospitality.",
     },
     {
-      title: "Gifts & Hamper",
+      title: "Exclusive Gifts and Hampers",
       description:
-        "Distinguishing ourselves through personalized gift and hamper offerings, we ease your worries about guest appreciation. Tailored to your preferences, our unique selling point lies in crafting thoughtful and delightful surprises for every event. Elevate the guest experience with our personalized touch, ensuring memorable moments of gratitude and joy.",
+        "Our unique approach to personalized gifts and hampers ensures that your guests feel truly appreciated. We craft thoughtful surprises tailored to your preferences, making each event memorable with meaningful tokens of gratitude and joy.",
     },
     {
-      title: "Photography",
+      title: "Professional Photography Services",
       description:
-        "Capture and immortalize life's pivotal moments with our expertise in connecting you with skilled photographers. We assist in finding an expert who can beautifully capture every event, ensuring your cherished memories are preserved through fabulous photos and videos that last a lifetime. Trust us to enhance your special occasions.",
+        "Preserve every special moment with the help of skilled photographers we connect you with. From candid shots to professional videos, we ensure your memories are beautifully captured and cherished for a lifetime.",
     },
     {
-      title: "Professional Artists",
+      title: "Makeup and Mehendi Artists",
       description:
-        "Elevate your look with our connections to top-notch makeup and mehendi vendors. We assist in finding the best by arranging trials, assuring everyone in the event will radiate beauty on the big day. Trust us to connect you with vendors who create the perfect bridal aesthetic.",
+        "Enhance your look with the help of top-tier makeup and mehendi artists. We arrange trials to help you find the best fit, ensuring everyone looks stunning on the big day. Let us connect you with professionals who bring your bridal vision to life.",
     },
     {
-      title: "Transportation",
+      title: "Effortless Transportation Solutions",
       description:
-        "We provide comprehensive transportation services with cabs, mini buses, and buses available for both airport transfers and local travel. Should your guests wish to explore nearby tourist destinations, we facilitate taxis for their convenience. Our aim is to ensure seamless and comfortable travel experiences throughout their stay in the city.",
+        "We offer seamless transportation solutions, including cabs, mini-buses, and larger buses for airport transfers and local travel. Additionally, we can arrange taxis for guests who wish to explore nearby attractions, ensuring a smooth and comfortable travel experience throughout their stay.",
     },
   ];
   

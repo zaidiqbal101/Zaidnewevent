@@ -3,27 +3,27 @@ import React from "react";
 const features = [
   {
     // icon: "📋",
-    title: "One stop solution",
+    title: "All-in-One Event Solutions",
     description:
-      "We handle every aspect of your event, from coordinating guest transportation to crafting personalized gifts and hampers. No detail is too small for our attention. Your needs, no matter how minute, are our priority, ensuring a seamless and memorable experience for every aspect of your event.",
+      "We take care of every detail of your event, from organizing guest transportation to curating custom gifts and hampers. No task is too small or too big for us. Our priority is to meet all your needs with precision, ensuring a hassle-free and unforgettable event experience.",
   },
   {
     // icon: "💰",
-    title: "Intimate to Lavish Celebrations",
+    title: "Celebrations for Every Occasion",
     description:
-      "Planners Events is here for you, whether you're organizing an intimate gathering or a lavish wedding affair. Simply communicate your requirements, and we'll take care of every detail. Our commitment is to seamlessly manage and execute all aspects, ensuring your event, regardless of size, is a resounding success.",
+      "Whether you’re hosting an intimate gathering or a grand wedding celebration, we’re here to bring your vision to life. Share your ideas with us, and we’ll handle the rest, ensuring that every detail is meticulously planned and executed for a flawless event, no matter the scale.",
   },
   {
     // icon: "👥",
-    title: "Cost-effective for all",
+    title: "Affordable and Customizable Services",
     description:
-      "We provide tailor-made plans to accommodate individual spending preferences. Irrespective of the budget, our services are crafted to surpass your expectations, ensuring a personalized experience that meets your financial considerations. Your satisfaction is our priority, and we aim to deliver exceptional service regardless of the financial framework you choose.",
+      "We offer flexible plans tailored to suit your unique budget. Regardless of your spending preferences, we strive to provide personalized and high-quality services that exceed your expectations. Our focus is on delivering value and satisfaction, making your event truly special.",
   },
   {
     // icon: "📊",
-    title: "Unmatched Excellence Every Time",
+    title: "Exceptional Quality Guaranteed",
     description:
-      "Consistently exceeding expectations, we deliver exceptional quality that ensures 100% customer satisfaction, creating memorable experiences every time. Our commitment is to consistently surprise with superior quality, going above and beyond to meet and exceed expectations, ensuring each experience is unforgettable and leaves customers completely satisfied.",
+      "We pride ourselves on delivering excellence with every event we plan. Our commitment to superior service ensures unforgettable moments and 100% customer satisfaction. With attention to detail and quality, we go above and beyond to create memorable experiences every time.",
   },
 ];
 
@@ -33,11 +33,10 @@ const AboutUsBox = () => {
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-rose-700 mb-6">
-          What sets us apart from others
+        What Makes Us Unique
         </h2>
         <p className="text-gray-600 text-lg mb-12">
-          Your ultimate solution for all event needs, offering comprehensive
-          services for a seamless and memorable experience.
+        Your one-stop destination for all your event needs, providing holistic solutions to ensure a smooth and unforgettable experience.
         </p>
 
         {/* Features Grid */}

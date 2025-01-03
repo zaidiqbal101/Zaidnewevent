@@ -16,7 +16,12 @@ import Birthdaygurgaon from "../pages/birthdaygurgaon";
 import Birthdaynoida from "../pages/birthdaynoida";
 // import Anniversary from "../pages/servicesanniversary";
 import ServicesAnniversary from "../pages/servicesanniversary";
-
+import KittyParty from "../pages/kittyparty";
+import BabyShower from "../pages/babyshower";
+import RetirementParty from "../pages/retirementparty";
+import ThemeParty from "../pages/ThemeParty";
+import ReunionParty from "../pages/reunionparty";
+import AlumuniMeet from "../pages/AlumuniMeet";
 const AppRoute = () => {
   return (
     <Router>
@@ -36,7 +41,12 @@ const AppRoute = () => {
         <Route path="/birthdaygurgaon"  element={<Birthdaygurgaon/>} /> 
         <Route path="/birthdaynoida" element={<Birthdaynoida/>}/>
         <Route path="/servicesanniversary" element={<ServicesAnniversary/>}/>
-
+        <Route path="/kittyparty" element={<KittyParty/>}/>
+        <Route path="/BabyShower" element={<BabyShower/>}/>
+        <Route path="/RetirementParty" element={<RetirementParty/>}/>
+        <Route path="/ThemeParty" element={<ThemeParty/>}/>
+        <Route path="/ReunionParty" element={<ReunionParty/>}/>
+        <Route path="/AlumuniMeet" element={<AlumuniMeet/>}/>
       </Routes>
       <Footer />
     </Router>

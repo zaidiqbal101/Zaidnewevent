@@ -232,10 +232,13 @@ const MainContent = () => {
               special occasion will be handled with precision and care. While we
               work behind the scenes to create lasting memories, you can focus
               on enjoying your celebration to the fullest!
-            </p>
-            <button className="bg-rose-700 text-white px-6 py-2 rounded hover:bg-rose-800">
+            </p><br/>
+            <Link
+              to="/contactPage"
+              className="bg-rose-700 text-white px-4 py-2 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
 
           {/* Image Content */}
