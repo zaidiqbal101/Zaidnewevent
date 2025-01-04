@@ -1,198 +1,133 @@
 import React, { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import { ChevronDownIcon, MenuIcon, XIcon } from "@heroicons/react/solid";
 
 const Header = () => {
-  const [isWeddingDropdownOpen, setIsWeddingDropdownOpen] = useState(false);
-  const [isBirthdayDropdownOpen, setIsBirthdayDropdownOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState({});
+
+  const toggleDropdown = (name) => {
+    setIsDropdownOpen((prev) => ({ ...prev, [name]: !prev[name] }));
+  };
+
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/aboutus" },
+    {
+      name: "Wedding",
+      dropdown: [{ name: "Wedding Planners in Gya", href: "/weddingdelhi" }]
+    },
+    {
+      name: "Birthday",
+      dropdown: [{ name: "Birthday Party Planner in Gya", href: "/birthdaydelhi" }]
+    },
+    {
+      name: "Services",
+      dropdown: [
+        { name: "Anniversary", href: "/servicesanniversary" },
+        { name: "Kitty Party", href: "/kittyparty" },
+        { name: "Baby Shower", href: "/babyshower" },
+        { name: "Retirement Party", href: "/retirementparty" },
+        { name: "Theme Party", href: "/themeparty" },
+        { name: "Reunion Party", href: "/reunionparty" },
+        { name: "Alumni Meet", href: "/AlumuniMeet" }
+      ]
+    },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Blog", href: "/blogpage" },
+    { name: "Contact Us", href: "/contactPage" }
+  ];
 
   return (
-    <header className="bg-[#290f22] text-white">
+    <header className="bg-[#290f22] text-white z-50 relative">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
         <div>
-          <img
-            src="/assets/Aryan-Event-Logo.png"
-            alt="Planners Events Logo"
-            className="h-16"
-          />
+          <img src="/assets/Aryan-Event-Logo.png" alt="Logo" className="h-16" />
         </div>
 
         {/* Mobile menu toggle button */}
         <button
-          className="block lg:hidden text-white"
+          className="block lg:hidden text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <ChevronDownIcon className="w-6 h-6" />
+          {isMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
         </button>
 
-        {/* Navigation */}
-        <nav className={`space-x-4 lg:flex ${isMenuOpen ? "block" : "hidden"}`}>
-          <a href="/" className="hover:text-yellow-400">
-            Home
-          </a>
-          <a href="aboutus" className="hover:text-yellow-400">
-            About
-          </a>
-
-          {/* Wedding Dropdown */}
-          <div
-            className="inline-block relative group"
-            onMouseEnter={() => setIsWeddingDropdownOpen(true)}
-            onMouseLeave={() => setIsWeddingDropdownOpen(false)}
+        {/* Sidebar for small screens */}
+        <div
+          className={`fixed top-0 left-0 w-64 h-full bg-[#290f22] text-white z-50 transform transition-transform ${
+            isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          } lg:hidden`}
+        >
+          <button
+            className="absolute top-4 right-4 focus:outline-none"
+            onClick={() => setIsMenuOpen(false)}
           >
-            <button className="hover:text-yellow-400 inline-flex items-center">
-              <span>Wedding</span>
-              <ChevronDownIcon className="w-4 h-4 ml-1" />
-            </button>
-            <div
-              className={`absolute left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 mt-0 ${
-                isWeddingDropdownOpen ? "visible opacity-100" : ""
-              }`}
-            >
-              <div className="pt-4">
-                <div className="bg-white rounded-lg shadow-lg w-56 text-gray-700">
-                  <ul className="py-2">
-                    <li>
-                      <a
-                        href="/weddingdelhi"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Wedding Planners in Gya
-                      </a>
-                    </li>
-                  
-                  </ul>
-                </div>
+            <XIcon className="w-6 h-6 text-white" />
+          </button>
+          <nav className="mt-10">
+            {links.map((link, idx) => (
+              <div key={idx} className="px-4 py-2">
+                {link.dropdown ? (
+                  <>
+                    <button
+                      className="flex items-center w-full text-left hover:text-yellow-400"
+                      onClick={() => toggleDropdown(link.name)}
+                    >
+                      <span>{link.name}</span>
+                      <ChevronDownIcon className="w-4 h-4 ml-auto" />
+                    </button>
+                    <div className={`pl-4 ${isDropdownOpen[link.name] ? "block" : "hidden"}`}>
+                      {link.dropdown.map((sublink, subIdx) => (
+                        <a
+                          key={subIdx}
+                          href={sublink.href}
+                          className="block py-1 hover:text-yellow-400"
+                        >
+                          {sublink.name}
+                        </a>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <a href={link.href} className="block hover:text-yellow-400">
+                    {link.name}
+                  </a>
+                )}
               </div>
+            ))}
+          </nav>
+        </div>
+
+        {/* Desktop navigation */}
+        <nav className="hidden lg:flex lg:items-center lg:space-x-6 z-50">
+          {links.map((link, idx) => (
+            <div key={idx} className="relative group">
+              {link.dropdown ? (
+                <>
+                  <button className="hover:text-yellow-400 flex items-center">
+                    <span>{link.name}</span>
+                    <ChevronDownIcon className="w-4 h-4 ml-1" />
+                  </button>
+                  <div className="absolute left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-56 z-50 hidden group-hover:block">
+                    {link.dropdown.map((sublink, subIdx) => (
+                      <a
+                        key={subIdx}
+                        href={sublink.href}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        {sublink.name}
+                      </a>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <a href={link.href} className="hover:text-yellow-400 block">
+                  {link.name}
+                </a>
+              )}
             </div>
-          </div>
-
-          {/* Birthday Dropdown */}
-          <div
-            className="inline-block relative group"
-            onMouseEnter={() => setIsBirthdayDropdownOpen(true)}
-            onMouseLeave={() => setIsBirthdayDropdownOpen(false)}
-          >
-            <button className="hover:text-yellow-400 inline-flex items-center">
-              <span>Birthday</span>
-              <ChevronDownIcon className="w-4 h-4 ml-1" />
-            </button>
-
-            <div
-              className={`absolute left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 mt-0 ${
-                isBirthdayDropdownOpen ? "visible opacity-100" : ""
-              }`}
-            >
-              <div className="pt-4">
-                <div className="bg-white rounded-lg shadow-lg w-56 text-gray-700">
-                  <ul className="py-2">
-                    <li>
-                      <a
-                        href="/birthdaydelhi"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Birthday Party Planner in Gya
-                      </a>
-                    </li>
-                   
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Services Dropdown */}
-          <div
-            className="inline-block relative group"
-            onMouseEnter={() => setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => setIsServicesDropdownOpen(false)}
-          >
-            <button className="hover:text-yellow-400 inline-flex items-center">
-              <span>Services</span>
-              <ChevronDownIcon className="w-4 h-4 ml-1" />
-            </button>
-
-            <div
-              className={`absolute left-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 mt-0 ${
-                isServicesDropdownOpen ? "visible opacity-100" : ""
-              }`}
-            >
-              <div className="pt-4">
-                <div className="bg-white rounded-lg shadow-lg w-64 text-gray-700">
-                  <ul className="py-2">
-                    <li>
-                      <a
-                        href="/servicesanniversary"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Anniversary
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/kittyparty"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Kitty Party
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/babyshower"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Baby Shower
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/retirementparty"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Retirement Party
-                      </a>
-                    </li>
-                   
-                    <li>
-                      <a
-                        href="/themeparty"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Theme Party
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/reunionparty"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Reunion Party
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/AlumuniMeet"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Alumni Meet
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a href="gallery" className="hover:text-yellow-400">
-            Gallery
-          </a>
-          <a href="blogpage" className="hover:text-yellow-400">
-            Blog
-          </a>
-          <a href="contactPage" className="hover:text-yellow-400">
-            Contact Us
-          </a>
+          ))}
         </nav>
       </div>
     </header>
