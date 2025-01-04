@@ -8,11 +8,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
 
   return (
-    <header className="bg-rose-800 text-white">
+    <header className="bg-[#290f22] text-white">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div>
           <img
-            src="/assets/logo.png"
+            src="/assets/Aryan-Event-Logo.png"
             alt="Planners Events Logo"
             className="h-16"
           />
@@ -58,25 +58,10 @@ const Header = () => {
                         href="/weddingdelhi"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        Wedding Planners in Delhi
+                        Wedding Planners in Gya
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/weddingnoida"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Wedding Planners in Noida
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/weddinggurgaon"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Wedding Planners in Gurgaon
-                      </a>
-                    </li>
+                  
                   </ul>
                 </div>
               </div>
@@ -107,25 +92,10 @@ const Header = () => {
                         href="/birthdaydelhi"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        Birthday Party Planner in Delhi
+                        Birthday Party Planner in Gya
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/birthdaynoida"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Birthday Party Planner in Noida
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/birthdaygurgaon"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Birthday Party Planner in Gurgaon
-                      </a>
-                    </li>
+                   
                   </ul>
                 </div>
               </div>

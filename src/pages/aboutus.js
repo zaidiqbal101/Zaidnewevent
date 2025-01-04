@@ -16,7 +16,7 @@ const About = () => {
 
         {/* Right side: Content */}
         <div className="w-1/2">
-          <h1 className="text-4xl font-bold text-rose-900 mb-6">About Planners Events</h1>
+          <h1 className="text-4xl font-bold text-[#351E30] mb-6">About Planners Events</h1>
           <p className="text-xl text-gray-700 mb-8">Creators of Timeless Celebrations!</p>
           <div className="max-w-3xl">
             <p className="text-lg text-gray-600 mb-6">

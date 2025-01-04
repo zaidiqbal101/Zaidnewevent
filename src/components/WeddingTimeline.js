@@ -52,7 +52,7 @@ const WeddingTimeline = () => {
   ];
 
   return (
-    <div className="relative h-[40vh] bg-[#001a0f]"> {/* Changed from min-h-screen to h-[40vh] */}
+    <div className="relative h-[40vh] bg-[#290F23]"> {/* Changed from min-h-screen to h-[40vh] */}
       {/* Bamboo Forest Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
