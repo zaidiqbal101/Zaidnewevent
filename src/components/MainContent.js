@@ -1,34 +1,34 @@
 import React from "react";
 import Slider from "react-slick"; // Import react-slick
-
+import { ClipboardCheck, DollarSign, Users, PieChart, Palette, Brush } from "lucide-react";
 import WeddingTimeline from "./WeddingTimeline";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 const events = [
   {
     title: "Birthday",
-    image: "assets/birthdayf.png",
+    image: "/assets/birthday.png",
     
   },
   {
     title: "Anniversary",
-    image: "path_to_anniversary_image.jpg",
+    image: "/assets/pic1.png",
   },
   {
     title: "Wedding",
-    image: "assets/wefhdding.png",
+    image: "/assets/wedding.png",
   },
   {
     title: "Kitty Party",
-    image: "path_to_kitty_party_image.jpg",
+    image: "/assets/kitty_party.png",
   },
   {
     title: "Baby Shower",
-    image: "path_to_baby_shower_image.jpg",
+    image: "/assets/baby_shower.png",
   },
   {
     title: "Retirement Party",
-    image: "path_to_retirement_party_image.jpg",
+    image: "/assets/retirment.png",
   },
 ];
 
@@ -36,7 +36,7 @@ const EventServices = () => {
   return (
     <div className="bg-gray-100 py-10">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-800">
+        <h1 className="text-4xl font-bold text-[#290F24]">
           Event Services By Planners Events
         </h1>
         <p className="text-lg text-gray-600 mt-2">
@@ -77,85 +77,87 @@ const MainContent = () => {
     autoplaySpeed: 2000, // Autoplay interval in milliseconds
   };
 
+ 
+
   const features = [
     {
-      icon: "📋",
+      icon: <ClipboardCheck className="text-rose-500 w-8 h-8" />, // Icon styled with a rose color
       title: "Effortless Event Planning",
       description:
         "Relax and enjoy your special moments while we take care of every detail. From setup to execution, our team ensures a flawlessly coordinated event experience.",
       borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
-      icon: "💰",
+      icon: <DollarSign className="text-green-500 w-8 h-8" />, // Icon styled with a green color
       title: "Affordable Event Solutions",
       description:
-        "We design and execute events that fit your budget, combining smart planning and expert negotiation to deliver exceptional value without compromising quality",
+        "We design and execute events that fit your budget, combining smart planning and expert negotiation to deliver exceptional value without compromising quality.",
       borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
-      icon: "👥",
+      icon: <Users className="text-blue-500 w-8 h-8" />, // Icon styled with a blue color
       title: "Experienced Professionals",
       description:
-        "With  years of expertise, our team is equipped to handle all the challenges of event management, ensuring your celebration is stress-free and memorable",
+        "With years of expertise, our team is equipped to handle all the challenges of event management, ensuring your celebration is stress-free and memorable.",
       borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
-      icon: "📊",
+      icon: <PieChart className="text-purple-500 w-8 h-8" />, // Icon styled with a purple color
       title: "Transparent Budget Management",
       description:
         "We help you set a budget that aligns with your vision and maintain full transparency, ensuring you get the most value out of your investment.",
       borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
-      icon: "🎨",
+      icon: <Palette className="text-yellow-500 w-8 h-8" />, // Icon styled with a yellow color
       title: "Custom-Crafted Events",
       description:
         "Every event is designed to reflect your unique style and preferences. We work closely with you to bring your vision to life, creating unforgettable experiences.",
       borderColor: "border-rose-500  bg-rose-50 text-black",
     },
     {
-      icon: "🎨",
+      icon: <Brush className="text-indigo-500 w-8 h-8" />, // Icon styled with an indigo color
       title: "Tailored Event Experiences",
       description:
         "Our personalized approach ensures every detail of your event resonates with your personality, leaving you and your guests with cherished memories.",
       borderColor: "border-rose-500  bg-rose-50 text-black",
     },
   ];
-
+  
   const excellence = [
     {
-      icon: "📋",
+            icon: <ClipboardCheck className="text-rose-500 w-8 h-8" />, // Icon styled with a rose color
       title: "Venue Selection",
       description:
         "We specialize in finding venues that perfectly match your style, preferences, and budget. From arranging seamless site visits to securing exclusive packages, we simplify the process to help you shortlist the ideal location.",
       
       },
     {
-      icon: "💰",
+            icon: <DollarSign className="text-green-500 w-8 h-8" />, // Icon styled with a green color
       title: "Catering Services",
       description:
         "If your chosen venue allows external catering, we’ll arrange a top-tier service that suits your event. Our team works with you to craft a menu that aligns with your taste and budget, ensuring a delectable dining experience.",
     },
     {
-      icon: "👥",
+            icon: <Users className="text-blue-500 w-8 h-8" />, // Icon styled with a blue color
       title: "Event Decorations",
       description:
         "Our creative team transforms your vision into reality with stunning decorations tailored to your theme. With over 15 years of experience, we handle every detail to ensure a flawless and visually captivating event.",
     },
     {
-      icon: "📊",
+            icon: <PieChart className="text-purple-500 w-8 h-8" />, // Icon styled with a purple color
       title: "Guest Coordination",
       description:
         "We make guest management effortless, from maintaining a clear budget to aligning with your event’s theme. Our expertise helps recommend innovative ideas and ensures seamless coordination throughout your celebration.",
     },
     {
-      icon: "🎨",
+            icon: <Palette className="text-yellow-500 w-8 h-8" />, // Icon styled with a yellow color
       title: "Gifting & Hampers",
       description:
         "Delight your guests with thoughtfully curated gifts and hampers. We work closely with you to create unique, personalized keepsakes that leave a lasting impression on everyone attending your event.",
     },
     {
-      icon: "🎨",
+            icon: <Brush className="text-indigo-500 w-8 h-8" />, // Icon styled with an indigo color
       title: "Transportation Services",
       description:
         "From guest pickups to event logistics, we provide reliable and efficient transportation services. Our focus is on ensuring a smooth journey for you and your attendees, making your event stress-free and enjoyable.",
@@ -198,7 +200,7 @@ const MainContent = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
           {/* Text Content */}
           <div className="md:w-2/3">
-            <h2 className="text-3xl font-bold text-rose-700 mb-4">
+            <h2 className="text-3xl font-bold text-[#341f2e] mb-4">
               Top Wedding and Event Management Company in Delhi NCR
             </h2>
             <h3 className="text-xl font-semibold mb-6">
@@ -235,7 +237,7 @@ const MainContent = () => {
             </p><br/>
             <Link
               to="/contactPage"
-              className="bg-rose-700 text-white px-4 py-2 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+              className="bg-[#341f2e] text-white px-4 py-2 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
             >
               Contact Us
             </Link>
@@ -256,7 +258,7 @@ const MainContent = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-rose-700 mb-6">
+          <h2 className="text-4xl font-bold text-[#341f2e] mb-6">
           "Why Trust Planners Events for Your Special Occasions?"
           </h2>
           <p className="text-gray-600 text-lg mb-12">
@@ -272,10 +274,12 @@ const MainContent = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-lg shadow-md border-l-4 ${feature.borderColor}`}
+                className={`p-6 rounded-lg shadow-md  ${feature.borderColor} text-center`}
               >
                 {/* Icon */}
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <div className="flex justify-center items-center mb-4">
+                  <div className="text-4xl">{feature.icon}</div>
+                </div>
                 {/* Title */}
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                 {/* Description */}
@@ -283,6 +287,7 @@ const MainContent = () => {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -293,7 +298,7 @@ const MainContent = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-rose-700 mb-6">
+          <h2 className="text-4xl font-bold text-[#290F24] mb-6">
             Event Excellence Redefined
           </h2>
           <p className="text-gray-600 text-lg mb-12">
@@ -310,7 +315,9 @@ const MainContent = () => {
                 className="bg-rose-100 text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
                 {/*Icon*/}
-                <div className="text-4xl mb-4">{excellent.icon}</div>
+                <div className="flex justify-center items-center mb-4">
+                  <div className="text-4xl">{excellent.icon}</div>
+                </div>
                 {/* Title */}
                 <h3 className="text-xl font-semibold mb-4">
                   {excellent.title}
@@ -325,7 +332,7 @@ const MainContent = () => {
           <div className="mt-8">
             <Link
               to="/aboutus"
-              className="bg-rose-700 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+              className="bg-[#290F24] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
             >
               Know More
             </Link>

@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-900 text-white py-12 rounded-tl-[90px]">
+    <footer className="bg-[#290F23] text-white py-12 rounded-tl-[90px]">
       <div className="container mx-auto px-4">
         {/* Planner Logo and Description */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -59,7 +59,7 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <div className="text-center text-sm text-gray-400 mt-8">
           <p>
-            Developed By <a href="https://www.brainydx.com" className="text-gray-400 hover:text-white">Nikatby Technologies</a>
+            Developed By <a href="https://www.brainydx.com" className="text-gray-400 hover:text-white">Powered By Nikatby Group</a>
           </p>
         </div>
       </div>

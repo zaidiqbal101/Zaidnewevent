@@ -48,7 +48,7 @@ const Weddingcontact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-rose-900 flex">
+    <div className="min-h-screen bg-[#290F23] flex">
       {/* Left Side Content */}
       <div className="w-1/2 p-12 text-white flex justify-center items-center">
         {/* Contact Info */}
@@ -188,7 +188,7 @@ const Weddingcontact = () => {
 
             <button
               type="submit"
-              className="bg-rose-900 text-white px-8 py-2 rounded hover:bg-[#3E7268] transition-colors"
+              className=" text-white px-8 py-2 rounded bg-[#290F23] hover:bg-[#351E30] transition-colors"
             >
               Submit
             </button>
