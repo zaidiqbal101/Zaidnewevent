@@ -4,6 +4,7 @@ import ContactPage from "./ContactPage";
 import Weddingcontact from "./weddingcontact";
 import RecentWeddings from "./recentwedding";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -121,10 +122,18 @@ const BirthdayDelhi = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData); // Handle form submission logic here
     setIsModalOpen(false);
+    const response =  axios.post('http://localhost:1200/saveFormData',formData);
+    response.then(response => {
+      console.log('Success:', response.data);
+      alert(response.data.message); // Show the success message from the server
+    }).catch(error => {
+      console.error('Error:', error);
+    });
   };
   return (
     <div className="bg-rose-50 text-black py-12">
