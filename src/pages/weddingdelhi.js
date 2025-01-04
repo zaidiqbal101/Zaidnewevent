@@ -4,7 +4,7 @@ import ContactPage from "./ContactPage";
 import Weddingcontact from "./weddingcontact";
 import RecentWeddings from "./recentwedding";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -76,8 +76,7 @@ const WeddingDelhi = () => {
     email: "",
     location: "",
     eventType: "",
-    date: '',
-    isRobot: false,
+    
   });
   const eventTypes = ["Wedding", "Birthday", "Corporate Event", "Baby Shower"];
 
@@ -119,27 +118,19 @@ const WeddingDelhi = () => {
         "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
     },
   ];
-  const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value
-    });
-  };
-
-  const handleCheckboxChange = () => {
-    setFormData({
-      ...formData,
-      isRobot: !formData.isRobot
-    });
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData); // Handle form submission logic here
 
-    const response = axios.post('http://localhost:1200/submit', formData);
+    const response =  axios.post('http://localhost:1200/saveFormData',formData);
     response.then(response => {
       console.log('Success:', response.data);
+      alert(response.data.message); // Show the success message from the server
     }).catch(error => {
       console.error('Error:', error);
     });

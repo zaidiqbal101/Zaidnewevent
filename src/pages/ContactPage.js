@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -36,6 +36,14 @@ const ContactPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData); // Handle form submission logic here
+
+    const response =  axios.post('http://localhost:1200/submit',formData);
+    response.then(response => {
+      console.log('Success:', response.data);
+      alert(response.data.message); // Show the success message from the server
+    }).catch(error => {
+      console.error('Error:', error);
+    });
   };
 
   return (
