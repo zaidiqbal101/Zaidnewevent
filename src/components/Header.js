@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [isWeddingDropdownOpen, setIsWeddingDropdownOpen] = useState(false);
   const [isBirthdayDropdownOpen, setIsBirthdayDropdownOpen] = useState(false);
@@ -10,14 +10,15 @@ const Header = () => {
   return (
     <header className="bg-[#290f22] text-white">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div>
-          <img
-            src="/assets/Aryan-Event-Logo.png"
-            alt="Planners Events Logo"
-            className="h-16"
-          />
-        </div>
-
+      <div>
+      <Link to="/"> 
+        <img 
+          src="/assets/Aryan-Event-Logo.png" 
+          alt="Planners Events Logo" 
+          className="h-16" 
+        />
+      </Link>
+    </div>
         {/* Mobile menu toggle button */}
         <button
           className="block lg:hidden text-white"
@@ -58,7 +59,7 @@ const Header = () => {
                         href="/weddingdelhi"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        Wedding Planners in Gya
+                        Wedding Planners in Gaya
                       </a>
                     </li>
                   
@@ -92,7 +93,7 @@ const Header = () => {
                         href="/birthdaydelhi"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        Birthday Party Planner in Gya
+                        Birthday Party Planner in Gaya
                       </a>
                     </li>
                    

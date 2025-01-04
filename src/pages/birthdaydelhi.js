@@ -9,11 +9,11 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Delhi?",
+    "How much does a wedding planner cost in Gaya?",
     "What are the services offered by a wedding planner?",
     "What things do you need to discuss with a wedding planner before hiring them?",
     "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Delhi?",
+    "What are the responsibilities of destination wedding planners in Gaya?",
   ];
 
   const answers = [
@@ -90,13 +90,13 @@ const BirthdayDelhi = () => {
       icon: "💰",
       title: "Vendor Coordination",
       description:
-        "We make sure you get excellent catering, décor, and entertainment services thanks to our wide network of leading local suppliers. We take care of all the organizing so that your planning goes well.",
+        "We make sure you get excellent catering, decor, and entertainment services thanks to our wide network of leading local suppliers. We take care of all the organizing so that your planning goes well.",
     },
     {
       icon: "👥",
       title: "Experienced Team",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
+        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our  years of expertise ensure a smooth and enjoyable experience for your event.",
     },
     {
       icon: "📊",
@@ -143,11 +143,10 @@ const BirthdayDelhi = () => {
           <h1 className="text-4xl font-bold mb-6 leading-snug">
             We are the Best <br />
             <span className="text-yellow-400">Birthday</span> <br />
-            Planners in Delhi NCR
+            Planners in Gaya
           </h1>
           <p className="text-lg mb-8">
-            Your wedding should tell your story, and we at Planners Events are
-            here to bring your dream celebration to life with our expertise.
+          Your birthday is a unique occasion. Let Planners Events help you create a celebration that truly reflects your personality and creates lasting memories
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -274,26 +273,16 @@ const BirthdayDelhi = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Best Wedding Planner in Delhi NCR: Making Every Moment Magical
+                Best Birthday Planner in Gaya
               </h2>
 
               <p className="mb-4 leading-relaxed">
-                Welcome to Planners Events, One of the best wedding planners in
-                Delhi-NCR. We’re here to help you create the wedding of your
-                dreams. Our team focuses on turning your special day into a
-                memorable celebration filled with joy and love. With careful
-                planning and attention to detail, we make sure everything runs
-                smoothly at some of the best venues in Delhi. Many of us start
-                fantasizing about our big day long before we truly understand
-                what marriage is all about. The dress, the makeup, the parties,
-                and the decorations that send our hearts pounding come first. We
-                know that everyone has their own unique story, and we’re
-                dedicated to designing a wedding that truly reflects who you
-                are. Our friendly team closely works with you to understand your
-                ideas and bring them to life in a beautiful way. From intimate
-                gatherings to grand celebrations, we tailor every element to
-                make your wedding unforgettable. Trust us to manage the stress
-                so you can focus on cherishing every moment of your big day.
+              Experience the magic of a perfectly planned birthday party with Planners
+               Events in Gaya.<br/> We specialize in crafting unique celebrations
+                that reflect your personality and create lasting memories.<br/> From 
+                vibrant theme parties to intimate gatherings, we handle every aspect, 
+                from venue selection <br/> and decor to entertainment and catering. 
+                Let us turn your birthday dreams into reality.
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
@@ -317,16 +306,19 @@ const BirthdayDelhi = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Why Planners Events is Your Trusted Wedding Planner in Delhi,
-                NCR
+              Why Planners Events is Your Trusted Birthday Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
-                We take pride in having a thorough understanding of the finest
-                wedding venues in Delhi NCR, ensuring you find the perfect
-                location for your love story. Whether you imagine an intimate
-                get-together or a lavish destination wedding in India, we
-                customize each detail to capture your own personality and sense
-                of style.
+              Planners Events is your trusted birthday planner in Gaya, 
+              offering a personalized and stress-free experience. 
+              We possess in-depth knowledge of the best venues in Gaya,
+               ensuring you find the perfect location for your celebration.
+                Whether you dream of a vibrant theme party or an intimate gathering, 
+                we customize every aspect to reflect your unique personality and style. 
+                Our comprehensive services include venue sourcing, decor, entertainment, 
+                catering, invitations, and more, allowing you to relax and enjoy your special day.
+                 We prioritize creating a fun and memorable experience for you and your guests,
+                  paying close attention to every detail to ensure a seamless and unforgettable celebration.
               </p>
               <p className="mb-4 leading-relaxed">
                 Additionally, we offer our clients a full range of services,
@@ -339,7 +331,7 @@ const BirthdayDelhi = () => {
               </p>
               <p className="mb-4 leading-relaxed">
                 With our expertise as some of the best wedding planners in
-                Delhi, we ensure that your special day is not only beautiful but
+                Gaya, we ensure that your special day is not only beautiful but
                 also a true reflection of your story.
               </p>
             </div>
@@ -349,7 +341,7 @@ const BirthdayDelhi = () => {
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-rose-700 mb-6">
-              End-to-End Wedding Services: From Planning to Execution
+              End-to-End  Services: From Planning to Execution
             </h2>
             <p className="text-gray-600 text-lg mb-12">
               From comprehensive and meticulous planning to seamless and
@@ -378,7 +370,7 @@ const BirthdayDelhi = () => {
         </section>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center gap-4 mt-14">
+        {/* <div className="flex justify-center gap-4 mt-14">
         <Link
               to="/weddingnoida"
               className="bg-rose-700 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
@@ -391,7 +383,7 @@ const BirthdayDelhi = () => {
           >
             Wedding Planner in Gurgaon
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Weddingcontact />
