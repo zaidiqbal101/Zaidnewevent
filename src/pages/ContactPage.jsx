@@ -64,14 +64,14 @@ const ContactPage = () => {
 
           <div className="space-y-4 text-yellow-600">
             <div>
-              +91 96503 98807<br />
-              +91 9999988014
+            +91 9220565444<br />
+             
             </div>
-            <div>info@plannersevents.in</div>
+            <div>aryaneventsplanner@gmail.com</div>
             <div>
-              125, Second Floor<br />
-              Shahpur Jat, Siri Fort,<br />
-              New Delhi - 110049
+            Kujapi Gaya- 823002<br />
+             
+              
             </div>
           </div>
         </div>

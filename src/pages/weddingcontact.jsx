@@ -67,17 +67,14 @@ const Weddingcontact = () => {
 
           <div className="space-y-4 text-yellow-400">
             <div>
-              +91 96503 98807
+            +91 9220565444
               <br />
-              +91 9999988014
+           
             </div>
-            <div>info@plannersevents.in</div>
+            <div>aryaneventsplanner@gmail.com</div>
             <div>
-              125, Second Floor
-              <br />
-              Shahpur Jat, Siri Fort,
-              <br />
-              New Delhi - 110049
+              
+              Kujapi Gaya - 823002
             </div>
           </div>
         </div>

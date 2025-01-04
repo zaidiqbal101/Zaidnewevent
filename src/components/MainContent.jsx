@@ -201,18 +201,18 @@ const MainContent = () => {
           {/* Text Content */}
           <div className="md:w-2/3">
             <h2 className="text-3xl font-bold text-[#341f2e] mb-4">
-              Top Wedding and Event Management Company in Delhi NCR
+              Top Wedding and Event Management Company in Gaya
             </h2>
             <h3 className="text-xl font-semibold mb-6">
-              Planners Events: Best Event Planners in Delhi NCR, India
+              Planners Events: Best Event Planners in Gaya , India
             </h3>
             <p className="mb-4 leading-relaxed">
               Every celebration deserves to be extraordinary and unforgettable.
               At Planners Events, we specialize in making weddings, birthday
               parties, anniversaries, and corporate events truly remarkable with
               our creativity and professionalism. With over years of experience,
-              we are recognized as the leading event planners in Delhi,
-              delivering outstanding event management services in Delhi NCR and
+              we are recognized as the leading event planners in Gaya,
+              delivering outstanding event management services in Gaya  and
               across India.
             </p>
             <p className="mb-4 leading-relaxed">
@@ -226,7 +226,7 @@ const MainContent = () => {
               cherished by your guests.
             </p>
             <p className="mb-4 leading-relaxed">
-              As a leading event planner in Delhi and a trusted name in event
+              As a leading event planner in Gaya and a trusted name in event
               management, we prioritize excellence and creativity in every
               detail. Our team is committed to turning your dreams into reality,
               understanding that every element matters. When you choose us as
@@ -262,7 +262,7 @@ const MainContent = () => {
           "Why Trust Planners Events for Your Special Occasions?"
           </h2>
           <p className="text-gray-600 text-lg mb-12">
-          As premier social event organizers in Delhi, Planners Events is dedicated to
+          As premier social event organizers in Gaya, Planners Events is dedicated to
            creating unforgettable experiences tailored to your unique vision and vibrant 
            personality. Let us transform your celebrations into extraordinary moments.
 

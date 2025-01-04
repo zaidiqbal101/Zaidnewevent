@@ -33,7 +33,7 @@ const RecentWeddings = () => {
     <div className="bg-white py-10">
       <div className="text-center mb-10">
         <h1 className="text-4xl text-rose-900 font-bold text-gray-800">
-          Our Recent Weddings in Delhi, Noida, and Gurgaon
+          Our Recent Celebrations 
         </h1>
         <p className="text-lg text-gray-600 mt-2">
           Discover a variety of events we've planned recently.

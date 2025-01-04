@@ -11,11 +11,11 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Delhi?",
+    "How much does a wedding planner cost in Gaya?",
     "What are the services offered by a wedding planner?",
     "What things do you need to discuss with a wedding planner before hiring them?",
     "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Delhi?",
+    "What are the responsibilities of destination wedding planners in Gaya?",
   ];
 
   const answers = [
@@ -148,7 +148,7 @@ const WeddingDelhi = () => {
           <h1 className="text-4xl font-bold mb-6 leading-snug">
             We are the Best <br />
             <span className="text-yellow-400">Destination Wedding</span> <br />
-            Planners in Delhi NCR
+            Planners in Gaya
           </h1>
           <p className="text-lg mb-8">
             Your wedding should tell your story, and we at Planners Events are
@@ -279,16 +279,16 @@ const WeddingDelhi = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
               <h2 className="text-3xl font-bold text-[#290F23] mb-4">
-                Best Wedding Planner in Delhi NCR: Making Every Moment Magical
+                Best Wedding Planner in Gaya
               </h2>
 
               <p className="mb-4 leading-relaxed">
-                Welcome to Planners Events, One of the best wedding planners in
-                Delhi-NCR. We’re here to help you create the wedding of your
+                Welcome to Aryan Events, One of the best wedding planners in
+                Gaya. We’re here to help you create the wedding of your
                 dreams. Our team focuses on turning your special day into a
                 memorable celebration filled with joy and love. With careful
                 planning and attention to detail, we make sure everything runs
-                smoothly at some of the best venues in Delhi. Many of us start
+                smoothly at some of the best venues in Gaya. Many of us start
                 fantasizing about our big day long before we truly understand
                 what marriage is all about. The dress, the makeup, the parties,
                 and the decorations that send our hearts pounding come first. We
@@ -322,12 +322,11 @@ const WeddingDelhi = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-[#290F23] mb-4">
-                Why Planners Events is Your Trusted Wedding Planner in Delhi,
-                NCR
+                Why Planners Events is Your Trusted Wedding Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
                 We take pride in having a thorough understanding of the finest
-                wedding venues in Delhi NCR, ensuring you find the perfect
+                wedding venues in Gaya , ensuring you find the perfect
                 location for your love story. Whether you imagine an intimate
                 get-together or a lavish destination wedding in India, we
                 customize each detail to capture your own personality and sense
@@ -344,7 +343,7 @@ const WeddingDelhi = () => {
               </p>
               <p className="mb-4 leading-relaxed">
                 With our expertise as some of the best wedding planners in
-                Delhi, we ensure that your special day is not only beautiful but
+                Gaya, we ensure that your special day is not only beautiful but
                 also a true reflection of your story.
               </p>
             </div>
@@ -386,7 +385,7 @@ const WeddingDelhi = () => {
 
         {/* Navigation Buttons */}
         <div className="flex justify-center gap-4 mt-14">
-        <Link
+        {/* <Link
               to="/weddingnoida"
               className="bg-[#290F23] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-[#3f313c] transition duration-300"
             >
@@ -397,7 +396,7 @@ const WeddingDelhi = () => {
             className="bg-[#290F23] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#3f313c] transition-all"
           >
             Wedding Planner in Gurgaon
-          </button>
+          </button> */}
         </div>
       </div>
 

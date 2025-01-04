@@ -20,18 +20,18 @@ const About = () => {
           <p className="text-xl text-gray-700 mb-8">Creators of Timeless Celebrations!</p>
           <div className="max-w-3xl">
             <p className="text-lg text-gray-600 mb-6">
-            Welcome to [......] Events, your trusted partner in designing extraordinary moments. 
+            Welcome to Aryan Events, your trusted partner in designing extraordinary moments. 
             In today’s fast-paced world, we bring your dreams to life with precision and care. 
             Our experienced team of event planners manages every aspect, from concept to execution, ensuring a hassle-free journey.
             </p>
             <p className="text-lg text-gray-600 mb-6">
             Whether it’s a grand wedding or an intimate gathering, we tailor 
             our services to reflect your style and meet your needs. With a
-             passion for excellence, creativity, and attention to detail, [....] 
+             passion for excellence, creativity, and attention to detail, Aryan
              Events turns your vision into a breathtaking reality.
             </p>
             <p className="text-lg text-gray-600">
-            Let us take care of the complexities while you relish every cherished moment of your celebration. Your perfect event begins with [....] Events.
+            Let us take care of the complexities while you relish every cherished moment of your celebration. Your perfect event begins with Aryan Events.
             </p>
           </div>
         </div>

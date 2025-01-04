@@ -9,11 +9,11 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Delhi?",
+    "How much does a wedding planner cost in Gaya?",
     "What are the services offered by a wedding planner?",
     "What things do you need to discuss with a wedding planner before hiring them?",
     "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Delhi?",
+    "What are the responsibilities of destination wedding planners in Gaya?",
   ];
 
   const answers = [
@@ -81,7 +81,7 @@ const ServiceAnniversary = () => {
 
   const features = [
     {
-      icon: "📋", 
+      icon: "📋",
       title: "Venue Selection",
       description:
         "We give you access to a huge range of stunning settings that suit your tastes and style. Our staff will assist you in locating the ideal setting for the perfect wedding.",
@@ -96,7 +96,7 @@ const ServiceAnniversary = () => {
       icon: "👥",
       title: "Experienced Team",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
+        "At Aryan Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our  years of expertise ensure a smooth and enjoyable experience for your event.",
     },
     {
       icon: "📊",
@@ -126,13 +126,15 @@ const ServiceAnniversary = () => {
     event.preventDefault();
     console.log(formData); // Handle form submission logic here
     setIsModalOpen(false);
-    const response =  axios.post('http://localhost:1200/saveFormData',formData);
-    response.then(response => {
-      console.log('Success:', response.data);
-      alert(response.data.message); // Show the success message from the server
-    }).catch(error => {
-      console.error('Error:', error);
-    });
+    const response = axios.post("http://localhost:1200/saveFormData", formData);
+    response
+      .then((response) => {
+        console.log("Success:", response.data);
+        alert(response.data.message); // Show the success message from the server
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
   return (
     <div className="bg-rose-50 text-black py-12">
@@ -140,12 +142,11 @@ const ServiceAnniversary = () => {
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-bold mb-6 leading-snug">
-           Anniversary Celebration <br />
-
-            Planners in Delhi NCR
+            Anniversary Celebration <br />
+            {/* Planners in Gaya  */}
           </h1>
           <p className="text-lg mb-8">
-            Your wedding should tell your story, and we at Planners Events are
+            Your wedding should tell your story, and we at Aryan Events are
             here to bring your dream celebration to life with our expertise.
           </p>
           <button
@@ -273,26 +274,28 @@ const ServiceAnniversary = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Best Wedding Planner in Delhi NCR: Making Every Moment Magical
+                Best Anniversary Planner in Gaya: Making Every Moment Magical
               </h2>
 
               <p className="mb-4 leading-relaxed">
-                Welcome to Planners Events, One of the best wedding planners in
-                Delhi-NCR. We’re here to help you create the wedding of your
-                dreams. Our team focuses on turning your special day into a
-                memorable celebration filled with joy and love. With careful
-                planning and attention to detail, we make sure everything runs
-                smoothly at some of the best venues in Delhi. Many of us start
-                fantasizing about our big day long before we truly understand
-                what marriage is all about. The dress, the makeup, the parties,
-                and the decorations that send our hearts pounding come first. We
-                know that everyone has their own unique story, and we’re
-                dedicated to designing a wedding that truly reflects who you
-                are. Our friendly team closely works with you to understand your
-                ideas and bring them to life in a beautiful way. From intimate
-                gatherings to grand celebrations, we tailor every element to
-                make your wedding unforgettable. Trust us to manage the stress
-                so you can focus on cherishing every moment of your big day.
+                 Welcome to Aryan Events, your go-to partner
+                for creating unforgettable anniversary celebrations in Gaya.<br/>
+                We're here to help you commemorate your special day with a
+                celebration that reflects your unique love story.<br/> Our team
+                focuses on turning your anniversary into a memorable experience
+                filled with joy, romance, and <br/>cherished moments. With careful
+                planning and attention to detail, we ensure every aspect of your
+                celebration runs <br/>smoothly, from finding the perfect venue in
+                Gaya to coordinating every detail with elegance. We understand<br/>
+                that every anniversary is unique, just like your love story. Our
+                dedicated team works closely with you to understand<br/> your vision
+                and bring it to life in a beautiful and meaningful way. Whether
+                you envision an intimate dinner for two,<br/> a romantic getaway, or
+                a grand celebration with friends and family, we tailor every
+                element to create a truly<br/> unforgettable experience. Trust us to
+                manage the stress and logistics, allowing you to focus on
+                cherishing every<br/> moment of your special day and rekindling the
+                spark of your love.
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
@@ -316,30 +319,29 @@ const ServiceAnniversary = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Why Planners Events is Your Trusted Wedding Planner in Delhi,
-                NCR
+              Why Aryan Events is Your Trusted Anniversary Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
-                We take pride in having a thorough understanding of the finest
-                wedding venues in Delhi NCR, ensuring you find the perfect
-                location for your love story. Whether you imagine an intimate
-                get-together or a lavish destination wedding in India, we
-                customize each detail to capture your own personality and sense
-                of style.
+              Aryan Events is your trusted partner for creating unforgettable
+               anniversary celebrations. We take pride in our in-depth knowledge of 
+               the most romantic venues in Gaya, ensuring you find the perfect setting
+                to celebrate your love story. Whether you envision an intimate dinner
+                 for two, a romantic getaway, or a grand celebration with loved ones, 
+                 we customize every detail to reflect your unique personalities and shared history.
               </p>
               <p className="mb-4 leading-relaxed">
                 Additionally, we offer our clients a full range of services,
                 including catering, invitations, gifts, hospitality, and more.
                 The goal of weddings is to unite relatives, friends, and family
                 to celebrate the start of a new chapter in your loved ones’
-                lives. Our wedding planners are considerate of the feelings
+                lives. Our wedding Aryan are considerate of the feelings
                 associated with each ceremony and make sure everything follows
                 our valued traditions.
               </p>
               <p className="mb-4 leading-relaxed">
-                With our expertise as some of the best wedding planners in
-                Delhi, we ensure that your special day is not only beautiful but
-                also a true reflection of your story.
+                With our expertise as some of the best wedding Aryan in Gaya,
+                we ensure that your special day is not only beautiful but also a
+                true reflection of your story.
               </p>
             </div>
           </div>
@@ -348,7 +350,7 @@ const ServiceAnniversary = () => {
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-rose-700 mb-6">
-              End-to-End Wedding Services: From Planning to Execution
+              End-to-End  Services: From Planning to Execution
             </h2>
             <p className="text-gray-600 text-lg mb-12">
               From comprehensive and meticulous planning to seamless and
@@ -377,7 +379,7 @@ const ServiceAnniversary = () => {
         </section>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center gap-4 mt-14">
+        {/* <div className="flex justify-center gap-4 mt-14">
         <Link
               to="/weddingnoida"
               className="bg-rose-700 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
@@ -390,7 +392,7 @@ const ServiceAnniversary = () => {
           >
             Wedding Planner in Gurgaon
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Weddingcontact />
