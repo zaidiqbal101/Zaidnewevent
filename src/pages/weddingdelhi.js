@@ -359,7 +359,7 @@ const WeddingDelhi = () => {
             <p className="text-gray-600 text-lg mb-12">
               From comprehensive and meticulous planning to seamless and
               flawless execution, we’ve got you covered at every step of the
-              process.
+              process..
             </p>
 
             {/* Features Grid */}
