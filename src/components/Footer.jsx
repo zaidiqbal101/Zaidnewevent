@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/assets/Aryan-Event-Logo.png" 
               alt="Aryan Logo" 
-              className="w-52 h-full mb-4" 
+              className="w-auto h-20 mb-4" 
             /> 
             <p className="text-left text-lg font-medium max-w-lg"> 
               Aryan Events is dedicated to orchestrating your special day in a manner that ensures lasting memories for a lifetime. 
@@ -58,8 +58,8 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="text-center text-sm text-gray-400 mt-8">
-          <p>
-           <a href="https://nikatby.com/" className="text-gray-400 hover:text-white">Powered By Nikatby Group</a>
+          <p className="text-gray-400 ">
+          Powered By<a href="https://nikatby.com/" className="text-gray-400 hover:text-white"> Nikatby Group</a>
           </p>
         </div>
       </div>
