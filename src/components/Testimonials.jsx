@@ -6,19 +6,19 @@ const testimonials = [
     name: "Rishi Malhotra",
     image: "path/to/image1.jpg", // Replace with actual image URL or import
     feedback:
-      "Planners Events ensured the success of our event from start to finish. Their professional and creative approach made the planning process effortless. Highly recommend their services for a seamless and memorable event!",
+      "Aryan Events ensured the success of our event from start to finish. Their professional and creative approach made the planning process effortless. Highly recommend their services for a seamless and memorable event!",
   },
   {
     name: "Vivek Singh Rajput",
     image: "path/to/image2.jpg", // Replace with actual image URL or import
     feedback:
-      "Choosing Planners Events for our special day was brilliant! Impeccable attention, seamless coordination, and a team that perfectly understood our vision. Trust Planners Events for unforgettable memories!",
+      "Choosing Aryan Events for our special day was brilliant! Impeccable attention, seamless coordination, and a team that perfectly understood our vision. Trust Aryan Events for unforgettable memories!",
   },
   {
     name: "Shreya Gupta",
     image: "path/to/image3.jpg", // Replace with actual image URL or import
     feedback:
-      "Wow! Our event was a huge success, all thanks to Planners Events. From start to finish, they took care of every detail. Highly recommend their services!",
+      "Wow! Our event was a huge success, all thanks to Aryan Events. From start to finish, they took care of every detail. Highly recommend their services!",
   },
 ];
 

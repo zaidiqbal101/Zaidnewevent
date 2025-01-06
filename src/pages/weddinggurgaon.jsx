@@ -98,7 +98,7 @@ const WeddingGurgaon = () => {
       icon: "👥",
       title: "Experienced Team",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
+        "At Aryan Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
     },
     {
       icon: "📊",
@@ -147,7 +147,7 @@ const WeddingGurgaon = () => {
             Planners in Gurgaon 
           </h1>
           <p className="text-lg mb-8">
-            Your wedding should tell your story, and we at Planners Events are
+            Your wedding should tell your story, and we at Aryan Events are
             here to bring your dream celebration to life with our expertise.
           </p>
           <button
@@ -279,7 +279,7 @@ const WeddingGurgaon = () => {
               </h2>
 
               <p className="mb-4 leading-relaxed">
-                Welcome to Planners Events, One of the best wedding planners in
+                Welcome to Aryan Events, One of the best wedding planners in
                 Gurgaon. We’re here to help you create the wedding of your
                 dreams. Our team focuses on turning your special day into a
                 memorable celebration filled with joy and love. With careful
@@ -318,7 +318,7 @@ const WeddingGurgaon = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-                Why Planners Events is Your Trusted Wedding Planner in Gurgaon,
+                Why Aryan Events is Your Trusted Wedding Planner in Gurgaon,
                 NCR
               </h2>
               <p className="mb-4 leading-relaxed">

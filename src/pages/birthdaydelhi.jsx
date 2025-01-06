@@ -96,7 +96,7 @@ const BirthdayDelhi = () => {
       icon: "👥",
       title: "Experienced Team",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our  years of expertise ensure a smooth and enjoyable experience for your event.",
+        "At Aryan Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our  years of expertise ensure a smooth and enjoyable experience for your event.",
     },
     {
       icon: "📊",
@@ -146,7 +146,7 @@ const BirthdayDelhi = () => {
             Planners in Gaya
           </h1>
           <p className="text-lg mb-8">
-          Your birthday is a unique occasion. Let Planners Events help you create a celebration that truly reflects your personality and creates lasting memories
+          Your birthday is a unique occasion. Let Aryan Events help you create a celebration that truly reflects your personality and creates lasting memories
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -306,10 +306,10 @@ const BirthdayDelhi = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-rose-700 mb-4">
-              Why Planners Events is Your Trusted Birthday Planner in Gaya
+              Why Aryan Events is Your Trusted Birthday Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
-              Planners Events is your trusted birthday planner in Gaya, 
+              Aryan Events is your trusted birthday planner in Gaya, 
               offering a personalized and stress-free experience. 
               We possess in-depth knowledge of the best venues in Gaya,
                ensuring you find the perfect location for your celebration.

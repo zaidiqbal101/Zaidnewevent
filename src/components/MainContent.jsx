@@ -37,7 +37,7 @@ const EventServices = () => {
     <div className="bg-gray-100 py-10">
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-[#290F24]">
-          Event Services By Planners Events
+          Event Services By Aryan Events
         </h1>
         <p className="text-lg text-gray-600 mt-2">
           Discover a wide range of event solutions designed to make every
@@ -81,83 +81,83 @@ const MainContent = () => {
 
   const features = [
     {
-      icon: <ClipboardCheck className="text-rose-500 w-8 h-8" />, // Icon styled with a rose color
+      icon: <ClipboardCheck className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a rose color
       title: "Effortless Event Planning",
       description:
         "Relax and enjoy your special moments while we take care of every detail. From setup to execution, our team ensures a flawlessly coordinated event experience.",
-      borderColor: "border-rose-500  bg-rose-50 text-black",
+      borderColor: "bg-[#351e2f] text-white",
     },
     {
-      icon: <DollarSign className="text-green-500 w-8 h-8" />, // Icon styled with a green color
+      icon: <DollarSign className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a green color
       title: "Affordable Event Solutions",
       description:
         "We design and execute events that fit your budget, combining smart planning and expert negotiation to deliver exceptional value without compromising quality.",
-      borderColor: "border-rose-500  bg-rose-50 text-black",
+      borderColor: "bg-[#351e2f] text-white",
     },
     {
-      icon: <Users className="text-blue-500 w-8 h-8" />, // Icon styled with a blue color
+      icon: <Users className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a blue color
       title: "Experienced Professionals",
       description:
         "With years of expertise, our team is equipped to handle all the challenges of event management, ensuring your celebration is stress-free and memorable.",
-      borderColor: "border-rose-500  bg-rose-50 text-black",
+      borderColor: "bg-[#351e2f] text-white",
     },
     {
-      icon: <PieChart className="text-purple-500 w-8 h-8" />, // Icon styled with a purple color
+      icon: <PieChart className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a purple color
       title: "Transparent Budget Management",
       description:
         "We help you set a budget that aligns with your vision and maintain full transparency, ensuring you get the most value out of your investment.",
-      borderColor: "border-rose-500  bg-rose-50 text-black",
+      borderColor: "bg-[#351e2f] text-white",
     },
     {
-      icon: <Palette className="text-yellow-500 w-8 h-8" />, // Icon styled with a yellow color
+      icon: <Palette className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a yellow color
       title: "Custom-Crafted Events",
       description:
         "Every event is designed to reflect your unique style and preferences. We work closely with you to bring your vision to life, creating unforgettable experiences.",
-      borderColor: "border-rose-500  bg-rose-50 text-black",
+      borderColor: "bg-[#351e2f] text-white",
     },
     {
-      icon: <Brush className="text-indigo-500 w-8 h-8" />, // Icon styled with an indigo color
+      icon: <Brush className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with an indigo color
       title: "Tailored Event Experiences",
       description:
         "Our personalized approach ensures every detail of your event resonates with your personality, leaving you and your guests with cherished memories.",
-      borderColor: "border-rose-500  bg-rose-50 text-black",
+      borderColor: "bg-[#351e2f] text-white",
     },
   ];
   
   const excellence = [
     {
-            icon: <ClipboardCheck className="text-rose-500 w-8 h-8" />, // Icon styled with a rose color
+            icon: <ClipboardCheck className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a rose color
       title: "Venue Selection",
       description:
         "We specialize in finding venues that perfectly match your style, preferences, and budget. From arranging seamless site visits to securing exclusive packages, we simplify the process to help you shortlist the ideal location.",
       
       },
     {
-            icon: <DollarSign className="text-green-500 w-8 h-8" />, // Icon styled with a green color
+            icon: <DollarSign className="text-white w-12 h-12" strokeWidth={1}/>, // Icon styled with a green color
       title: "Catering Services",
       description:
         "If your chosen venue allows external catering, we’ll arrange a top-tier service that suits your event. Our team works with you to craft a menu that aligns with your taste and budget, ensuring a delectable dining experience.",
     },
     {
-            icon: <Users className="text-blue-500 w-8 h-8" />, // Icon styled with a blue color
+            icon: <Users className="text-white w-12 h-12" strokeWidth={1}/>, // Icon styled with a blue color
       title: "Event Decorations",
       description:
         "Our creative team transforms your vision into reality with stunning decorations tailored to your theme. With over 15 years of experience, we handle every detail to ensure a flawless and visually captivating event.",
     },
     {
-            icon: <PieChart className="text-purple-500 w-8 h-8" />, // Icon styled with a purple color
+            icon: <PieChart className="text-white w-12 h-12" strokeWidth={1}/>, // Icon styled with a purple color
       title: "Guest Coordination",
       description:
         "We make guest management effortless, from maintaining a clear budget to aligning with your event’s theme. Our expertise helps recommend innovative ideas and ensures seamless coordination throughout your celebration.",
     },
     {
-            icon: <Palette className="text-yellow-500 w-8 h-8" />, // Icon styled with a yellow color
+            icon: <Palette className="text-white w-12 h-12" strokeWidth={1}/>, // Icon styled with a yellow color
       title: "Gifting & Hampers",
       description:
         "Delight your guests with thoughtfully curated gifts and hampers. We work closely with you to create unique, personalized keepsakes that leave a lasting impression on everyone attending your event.",
     },
     {
-            icon: <Brush className="text-indigo-500 w-8 h-8" />, // Icon styled with an indigo color
+            icon: <Brush className="text-white w-12 h-12" strokeWidth={1}/>, // Icon styled with an indigo color
       title: "Transportation Services",
       description:
         "From guest pickups to event logistics, we provide reliable and efficient transportation services. Our focus is on ensuring a smooth journey for you and your attendees, making your event stress-free and enjoyable.",
@@ -165,11 +165,11 @@ const MainContent = () => {
   ];
 
   return (
-    <main className="flex-1 text-white  ">
+    <main className="flex-1 text-white">
       <section>
         <div className="   text-center">
           {/* Carousel component */}
-          <Slider className="max-h-full h-full w-[100%]" {...settings}>
+          <Slider className="max-h-full h-full w-full" {...settings}>
             <div>
               <img
                 src="/assets/pic1.png" // Correct path to the image
@@ -204,11 +204,11 @@ const MainContent = () => {
               Top Wedding and Event Management Company in Gaya
             </h2>
             <h3 className="text-xl font-semibold mb-6">
-              Planners Events: Best Event Planners in Gaya , India
+              Aryan Events: Best Event Planners in Gaya , India
             </h3>
             <p className="mb-4 leading-relaxed">
               Every celebration deserves to be extraordinary and unforgettable.
-              At Planners Events, we specialize in making weddings, birthday
+              At Aryan Events, we specialize in making weddings, birthday
               parties, anniversaries, and corporate events truly remarkable with
               our creativity and professionalism. With over years of experience,
               we are recognized as the leading event planners in Gaya,
@@ -259,10 +259,10 @@ const MainContent = () => {
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
           <h2 className="text-4xl font-bold text-[#341f2e] mb-6">
-          "Why Trust Planners Events for Your Special Occasions?"
+          "Why Trust Aryan Events for Your Special Occasions?"
           </h2>
-          <p className="text-gray-600 text-lg mb-12">
-          As premier social event organizers in Gaya, Planners Events is dedicated to
+          <p className="text-[#362431] text-lg mb-12">
+          As premier social event organizers in Gaya, Aryan Events is dedicated to
            creating unforgettable experiences tailored to your unique vision and vibrant 
            personality. Let us transform your celebrations into extraordinary moments.
 
@@ -312,7 +312,7 @@ const MainContent = () => {
             {excellence.map((excellent, index) => (
               <div
                 key={index}
-                className="bg-rose-100 text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                className="bg-[#351e2f] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
                 {/*Icon*/}
                 <div className="flex justify-center items-center mb-4">
@@ -332,7 +332,7 @@ const MainContent = () => {
           <div className="mt-8">
             <Link
               to="/aboutus"
-              className="bg-[#290F24] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+              className=" bg-[#351e2f] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-[#290F24] hover:shadow-md transition duration-300"
             >
               Know More
             </Link>

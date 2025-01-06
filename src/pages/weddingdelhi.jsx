@@ -151,7 +151,7 @@ const WeddingDelhi = () => {
             Planners in Gaya
           </h1>
           <p className="text-lg mb-8">
-            Your wedding should tell your story, and we at Planners Events are
+            Your wedding should tell your story, and we at Aryan Events are
             here to bring your dream celebration to life with our expertise.
           </p>
           <button
@@ -322,7 +322,7 @@ const WeddingDelhi = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-[#290F23] mb-4">
-                Why Planners Events is Your Trusted Wedding Planner in Gaya
+                Why Aryan Events is Your Trusted Wedding Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
                 We take pride in having a thorough understanding of the finest

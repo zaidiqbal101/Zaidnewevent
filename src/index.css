@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Dancing+Script:wght@400..700&display=swap');
+
+body{
+    overflow-x: hidden;
+    /* font-family: "Dancing Script", serif; */
+  /* font-optical-sizing: auto; */
+  /* font-weight: <weight>; */
+  /* font-style: normal; */
+}
+
+img {
+    user-drag: none; /* For Safari */
+    user-select: none; /* Prevent text/image selection */
+    -moz-user-select: none; /* For Firefox */
+    -webkit-user-drag: none; /* For Chrome and other WebKit browsers */
+    -webkit-user-select: none; /* For Chrome and other WebKit browsers */
+  }
+  

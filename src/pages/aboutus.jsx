@@ -17,7 +17,7 @@ const About = () => {
         {/* Right Side: Content */}
         <div className="w-full lg:w-1/2">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#351E30] mb-4 lg:mb-6">
-            About Planners Events
+            About Aryan Events
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-4 lg:mb-8">
             Creators of Timeless Celebrations!

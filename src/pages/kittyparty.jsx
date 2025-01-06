@@ -96,7 +96,7 @@ const KittyParty = () => {
       icon: "👥",
       title: "Experienced Team",
       description:
-        "At Planners Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
+        "At Aryan Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
     },
     {
       icon: "📊",
