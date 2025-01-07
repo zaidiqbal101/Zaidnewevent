@@ -5,6 +5,7 @@ import Weddingcontact from "./weddingcontact";
 import RecentWeddings from "./recentwedding";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Brush, ClipboardCheck, DollarSign, Palette, PieChart, Users } from "lucide-react";
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -26,10 +27,10 @@ const Faq = () => {
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
-      <h2 className="text-2xl text-rose-900 font-semibold mb-6 text-teal-900">
+      <h2 className="text-2xl text-[#351e2f] font-semibold mb-6">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-4 text-[#351e2f]">
         {questions.map((question, index) => (
           <div
             key={index}
@@ -81,37 +82,37 @@ const BabyShower = () => {
 
   const features = [
     {
-      icon: "📋", 
+      icon: <ClipboardCheck className="text-white w-12 h-12" strokeWidth={1} />, 
       title: "Venue Selection",
       description:
         "We give you access to a huge range of stunning settings that suit your tastes and style. Our staff will assist you in locating the ideal setting for the perfect wedding.",
     },
     {
-      icon: "💰",
+      icon: <DollarSign className="text-white w-12 h-12" strokeWidth={1} />,
       title: "Vendor Coordination",
       description:
         "We make sure you get excellent catering, décor, and entertainment services thanks to our wide network of leading local suppliers. We take care of all the organizing so that your planning goes well.",
     },
     {
-      icon: "👥",
+      icon: <Users className="text-white w-12 h-12" strokeWidth={1} />,
       title: "Experienced Team",
       description:
         "At Aryan Events, our event management team handles any unexpected twists. No matter how complex your event is, we adapt to your needs. Our 15+ years of expertise ensure a smooth and enjoyable experience for your event.",
     },
     {
-      icon: "📊",
+      icon: <PieChart className="text-white w-12 h-12" strokeWidth={1} />,
       title: "Budget Setting and Management",
       description:
         "We keep you through the budget-setting process, ensuring it aligns with your vision and everything is transparent. Our knowledge of event trends allows us to recommend creative ideas that fit your theme and budget.",
     },
     {
-      icon: "🎨",
+      icon: <Palette className="text-white w-12 h-12" strokeWidth={1} />,
       title: "Personalized Experience",
       description:
         "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
     },
     {
-      icon: "🎨",
+      icon: <Brush className="text-white w-12 h-12" strokeWidth={1} />,
       title: "Personalized Experience",
       description:
         "We are committed to creating unique and tailored events for each client. Our event managers keep your vision and preferences all through the event management process to ensure that your event turns out to be an utter delight for you.",
@@ -135,7 +136,7 @@ const BabyShower = () => {
     });
   };
   return (
-    <div className="bg-rose-50 text-black py-12">
+    <div className="bg-[#351e2f] text-white py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -150,7 +151,7 @@ const BabyShower = () => {
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-yellow-400 text-teal-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500"
+            className="bg-yellow-400 text-[#351e2f] px-6 py-3 rounded-md font-semibold hover:bg-yellow-500"
           >
             START PLANNING TODAY
           </button>
@@ -272,7 +273,7 @@ const BabyShower = () => {
         <section className="bg-white text-gray-800 py-10">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold text-rose-700 mb-4">
+              <h2 className="text-3xl font-bold text-[#351e2f]  mb-4">
                 Best Wedding Planner in Gaya : Making Every Moment Magical
               </h2>
 
@@ -315,7 +316,7 @@ const BabyShower = () => {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h2 className="text-3xl font-bold text-rose-700 mb-4">
+              <h2 className="text-3xl font-bold text-[#351e2f] mb-4">
                 Why Aryan Events is Your Trusted Wedding Planner in Gaya,
                 NCR
               </h2>
@@ -347,7 +348,7 @@ const BabyShower = () => {
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-rose-700 mb-6">
+            <h2 className="text-4xl font-bold text-[#351e2f] mb-6">
               End-to-End Wedding Services: From Planning to Execution
             </h2>
             <p className="text-gray-600 text-lg mb-12">
@@ -361,9 +362,11 @@ const BabyShower = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-rose-100 text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="bg-[#351e2f] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                 <div className="flex justify-center">
+                 <div className="text-4xl mb-4">{feature.icon}</div>
+                 </div>
                   <h3 className="text-xl font-semibold mb-4">
                     {feature.title}
                   </h3>

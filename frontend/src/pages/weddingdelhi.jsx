@@ -85,38 +85,38 @@ const WeddingDelhi = () => {
 
   const features = [
     {
-            icon: <ClipboardCheck className="text-rose-500 w-8 h-8" />, // Icon styled with a rose color
+            icon: <ClipboardCheck className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a rose color
       title: "Venue Selection",
       description:
         "We specialize in finding venues that perfectly match your style, preferences, and budget. From arranging seamless site visits to securing exclusive packages, we simplify the process to help you shortlist the ideal location.",
       
       },
     {
-            icon: <DollarSign className="text-green-500 w-8 h-8" />, // Icon styled with a green color
+            icon: <DollarSign className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a green color
       title: "Catering Services",
       description:
         "If your chosen venue allows external catering, we’ll arrange a top-tier service that suits your event. Our team works with you to craft a menu that aligns with your taste and budget, ensuring a delectable dining experience.",
     },
     {
-            icon: <Users className="text-blue-500 w-8 h-8" />, // Icon styled with a blue color
+            icon: <Users className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a blue color
       title: "Event Decorations",
       description:
         "Our creative team transforms your vision into reality with stunning decorations tailored to your theme. With over 15 years of experience, we handle every detail to ensure a flawless and visually captivating event.",
     },
     {
-            icon: <PieChart className="text-purple-500 w-8 h-8" />, // Icon styled with a purple color
+            icon: <PieChart className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a purple color
       title: "Guest Coordination",
       description:
         "We make guest management effortless, from maintaining a clear budget to aligning with your event’s theme. Our expertise helps recommend innovative ideas and ensures seamless coordination throughout your celebration.",
     },
     {
-            icon: <Palette className="text-yellow-500 w-8 h-8" />, // Icon styled with a yellow color
+            icon: <Palette className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a yellow color
       title: "Gifting & Hampers",
       description:
         "Delight your guests with thoughtfully curated gifts and hampers. We work closely with you to create unique, personalized keepsakes that leave a lasting impression on everyone attending your event.",
     },
     {
-            icon: <Brush className="text-indigo-500 w-8 h-8" />, // Icon styled with an indigo color
+            icon: <Brush className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with an indigo color
       title: "Transportation Services",
       description:
         "From guest pickups to event logistics, we provide reliable and efficient transportation services. Our focus is on ensuring a smooth journey for you and your attendees, making your event stress-free and enjoyable.",
@@ -370,7 +370,7 @@ const WeddingDelhi = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-[#290F23] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="bg-[#351e2f] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
                  <div className="flex justify-center">
                  <div className="text-4xl mb-4">{feature.icon}</div>

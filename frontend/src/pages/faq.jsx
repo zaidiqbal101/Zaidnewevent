@@ -29,7 +29,7 @@ const Faq = () => {
       <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {questions.map((question, index) => (
-          <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+          <div key={index} className="border border-gray-200 rounded-lg overflow-hidden text-red-600">
             <button
               className="flex items-center justify-between w-full p-4 bg-white hover:bg-gray-100"
               onClick={() => setActiveIndex(index === activeIndex ? null : index)}
