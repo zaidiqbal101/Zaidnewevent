@@ -5,7 +5,14 @@ import Weddingcontact from "./weddingcontact";
 import RecentWeddings from "./recentwedding";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { Brush, ClipboardCheck, DollarSign, Palette, PieChart, Users } from "lucide-react";
+import {
+  Brush,
+  ClipboardCheck,
+  DollarSign,
+  Palette,
+  PieChart,
+  Users,
+} from "lucide-react";
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -82,7 +89,7 @@ const BirthdayDelhi = () => {
 
   const features = [
     {
-      icon: <ClipboardCheck className="text-white w-12 h-12" strokeWidth={1} />, 
+      icon: <ClipboardCheck className="text-white w-12 h-12" strokeWidth={1} />,
       title: "Venue Selection",
       description:
         "We give you access to a huge range of stunning settings that suit your tastes and style. Our staff will assist you in locating the ideal setting for the perfect wedding.",
@@ -123,18 +130,19 @@ const BirthdayDelhi = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData); // Handle form submission logic here
     setIsModalOpen(false);
-    const response =  axios.post('http://localhost:1200/saveFormData',formData);
-    response.then(response => {
-      console.log('Success:', response.data);
-      alert(response.data.message); // Show the success message from the server
-    }).catch(error => {
-      console.error('Error:', error);
-    });
+    const response = axios.post("http://localhost:1200/saveFormData", formData);
+    response
+      .then((response) => {
+        console.log("Success:", response.data);
+        alert(response.data.message); // Show the success message from the server
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
   return (
     <div className="bg-[#351e2f] text-white py-12">
@@ -147,7 +155,9 @@ const BirthdayDelhi = () => {
             Planners in Gaya
           </h1>
           <p className="text-lg mb-8">
-          Your birthday is a unique occasion. Let Aryan Events help you create a celebration that truly reflects your personality and creates lasting memories
+            Your birthday is a unique occasion. Let Aryan Events help you create
+            a celebration that truly reflects your personality and creates
+            lasting memories
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -170,43 +180,51 @@ const BirthdayDelhi = () => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white p-6 rounded-lg w-full md:w-[40rem] lg:w-[50rem]">
-            <h2 className="text-2xl font-semibold mb-4">Plan Your Wedding</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-black">
+              Plan Your Wedding
+            </h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Name</label>
+                <label className="block text-sm font-medium mb-1 text-black">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Phone</label>
+                <label className="block text-sm font-medium mb-1 text-black">
+                  Phone
+                </label>
                 <input
                   type="text"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Email</label>
+                <label className="block text-sm font-medium mb-1 text-black">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-black">
                   Location
                 </label>
                 <input
@@ -214,30 +232,32 @@ const BirthdayDelhi = () => {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Date</label>
+                <label className="block text-sm font-medium text-black">
+                  Date
+                </label>
                 <input
                   type="date"
                   name="eventDate"
                   value={formData.eventDate}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block text-sm font-medium text-black">
                   Event Type
                 </label>
                 <select
                   name="eventType"
                   value={formData.eventType}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-black"
                 >
                   <option value="" disabled>
                     Select an event type
@@ -253,7 +273,7 @@ const BirthdayDelhi = () => {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="bg-gray-200 px-4 py-2 rounded-md"
+                  className="bg-gray-400 px-4 py-2 rounded-md"
                 >
                   Cancel
                 </button>
@@ -268,6 +288,7 @@ const BirthdayDelhi = () => {
           </div>
         </div>
       )}
+
       {/* Content Section */}
       <div className="bg-white text-teal-900 py-8 px-6 md:px-12 mt-12">
         <section className="bg-white text-gray-800 py-10">
@@ -278,12 +299,14 @@ const BirthdayDelhi = () => {
               </h2>
 
               <p className="mb-4 leading-relaxed">
-              Experience the magic of a perfectly planned birthday party with Planners
-               Events in Gaya.<br/> We specialize in crafting unique celebrations
-                that reflect your personality and create lasting memories.<br/> From 
-                vibrant theme parties to intimate gatherings, we handle every aspect, 
-                from venue selection <br/> and decor to entertainment and catering. 
-                Let us turn your birthday dreams into reality.
+                Experience the magic of a perfectly planned birthday party with
+                Aryan Events in Gaya.
+                <br /> We specialize in crafting unique celebrations that
+                reflect your personality and create lasting memories.
+                <br /> From vibrant theme parties to intimate gatherings, we
+                handle every aspect, from venue selection <br /> and decor to
+                entertainment and catering. Let us turn your birthday dreams
+                into reality.
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
@@ -307,19 +330,21 @@ const BirthdayDelhi = () => {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h2 className="text-3xl font-bold text-[#351e2f]  mb-4">
-              Why Aryan Events is Your Trusted Birthday Planner in Gaya
+                Why Aryan Events is Your Trusted Birthday Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
-              Aryan Events is your trusted birthday planner in Gaya, 
-              offering a personalized and stress-free experience. 
-              We possess in-depth knowledge of the best venues in Gaya,
-               ensuring you find the perfect location for your celebration.
-                Whether you dream of a vibrant theme party or an intimate gathering, 
-                we customize every aspect to reflect your unique personality and style. 
-                Our comprehensive services include venue sourcing, decor, entertainment, 
-                catering, invitations, and more, allowing you to relax and enjoy your special day.
-                 We prioritize creating a fun and memorable experience for you and your guests,
-                  paying close attention to every detail to ensure a seamless and unforgettable celebration.
+                Aryan Events is your trusted birthday planner in Gaya, offering
+                a personalized and stress-free experience. We possess in-depth
+                knowledge of the best venues in Gaya, ensuring you find the
+                perfect location for your celebration. Whether you dream of a
+                vibrant theme party or an intimate gathering, we customize every
+                aspect to reflect your unique personality and style. Our
+                comprehensive services include venue sourcing, decor,
+                entertainment, catering, invitations, and more, allowing you to
+                relax and enjoy your special day. We prioritize creating a fun
+                and memorable experience for you and your guests, paying close
+                attention to every detail to ensure a seamless and unforgettable
+                celebration.
               </p>
               <p className="mb-4 leading-relaxed">
                 Additionally, we offer our clients a full range of services,
@@ -331,9 +356,9 @@ const BirthdayDelhi = () => {
                 our valued traditions.
               </p>
               <p className="mb-4 leading-relaxed">
-                With our expertise as some of the best wedding planners in
-                Gaya, we ensure that your special day is not only beautiful but
-                also a true reflection of your story.
+                With our expertise as some of the best wedding planners in Gaya,
+                we ensure that your special day is not only beautiful but also a
+                true reflection of your story.
               </p>
             </div>
           </div>
@@ -342,7 +367,7 @@ const BirthdayDelhi = () => {
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-[#290F23] mb-6">
-              End-to-End  Services: From Planning to Execution
+              End-to-End Services: From Planning to Execution
             </h2>
             <p className="text-[#351e2f]  text-lg mb-12">
               From comprehensive and meticulous planning to seamless and
@@ -357,9 +382,9 @@ const BirthdayDelhi = () => {
                   key={index}
                   className="bg-[#351e2f]  text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
-                 <div className="flex justify-center">
-                 <div className="text-4xl mb-4">{feature.icon}</div>
-                 </div>
+                  <div className="flex justify-center">
+                    <div className="text-4xl mb-4">{feature.icon}</div>
+                  </div>
                   <h3 className="text-xl font-semibold mb-4">
                     {feature.title}
                   </h3>
