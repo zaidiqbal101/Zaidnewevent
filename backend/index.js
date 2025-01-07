@@ -5,7 +5,7 @@ const dayjs = require('dayjs');
 const app = express();
 const nodemailer = require('nodemailer');
 const contact = require('./controllers/contacts');
-const event_enquires = require('./controllers/event_inquires');
+const wedding = require('./controllers/wedding');  
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -18,13 +18,16 @@ app.use(
   })
 );
 
-// MongoDB Atlas connection
-const mongoURI = 'mongodb+srv://AryanEventsDB:@ry@nevent009@aryanevents.5ehl4.mongodb.net/?retryWrites=true&w=majority&appName=AryanEvents'; // Replace with your MongoDB Atlas URI
-mongoose.connect(mongoURI)
-  .then(() => console.log('Connected to MongoDB Atlas database!'))
+mongoose.connect('mongodb+srv://zaid:admin123@aryanevents.5ehl4.mongodb.net/?retryWrites=true&w=majority&appName=AryanEvents', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('MongoDB connection established'))
   .catch((err) => {
-    console.error('Database connection failed:', err.message);
+    console.error('MongoDB error: ', err.message);
+    process.exit(1); // Exit process if connection fails
   });
+
 
 // Basic route
 app.get('/', (req, res) => {
@@ -33,34 +36,8 @@ app.get('/', (req, res) => {
 
 // POST route for contact (if you want to use MongoDB)
 app.post('/submit', contact);
+app.post('/saveFormData', wedding);
 
-// POST route for saving event inquiry data
-app.post('/saveFormData', (req, res) => {
-  const formData = req.body;
-  const inputDate = formData.event_date;
-  const eventDate = dayjs(inputDate, 'DD-MM-YYYY').toDate(); // Convert to JavaScript Date
-
-  // Create a new event inquiry document
-  const newEventInquiry = new EventInquiry({
-    name: formData.name,
-    phone: formData.phone,
-    email: formData.email,
-    location: formData.location,
-    event_type: formData.event_type,
-    event_date: eventDate,
-  });
-
-  // Save to MongoDB
-  newEventInquiry.save()
-    .then(() => {
-      console.log('Event inquiry saved successfully!');
-      res.status(200).json({ message: 'Form data saved successfully!' });
-    })
-    .catch((err) => {
-      console.error('Error saving data:', err.message);
-      res.status(500).json({ error: 'Failed to save form data' });
-    });
-});
 
 // 404 handler - must be defined **after** all routes
 app.use((req, res) => {

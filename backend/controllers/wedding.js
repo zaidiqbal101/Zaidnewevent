@@ -4,21 +4,22 @@ const cors = require('cors');
 const dayjs = require('dayjs');
 const nodemailer = require('nodemailer');
 const app = express();
+
 // MongoDB Schema
-const contactSchema = new mongoose.Schema({
+const eventSchema = new mongoose.Schema({
   name: { type: String, required: true },
   phone: { type: Number, required: true },
   email: { type: String, required: true },
   location: { type: String, required: true },
   eventType: { type: String, required: true },
-  eventDate: { type: Date, required: true },
-  message: { type: String, required: true },
+  eventDate: { type: Date, required: true }
 });
 
-const ContactInquiry = mongoose.model('ContactInquiry', contactSchema);
+const EventInquiries = mongoose.model('EventInquiries', eventSchema);
 
 // Middleware to parse JSON
 app.use(express.json());
+
 // Use CORS middleware
 app.use(cors({
   origin: 'http://localhost:3000', // Replace with your frontend's origin
@@ -26,8 +27,8 @@ app.use(cors({
   credentials: true, // Enable cookies and authorization headers
 }));
 
-// Contact Form Handler
-const contact = async (req, res) => {
+// Event Form Handler
+const wedding = async (req, res) => {
   const formData = req.body;
   console.log(formData);
 
@@ -47,28 +48,25 @@ const contact = async (req, res) => {
     return res.json({ message: "Please enter your email" }); 
   } else if (!formData.location) { 
     return res.json({ message: "Please enter your location" }); 
-  } else if (!formData.date) { 
+  } else if (!formData.eventDate) { 
     return res.json({ message: "Please enter your event date" }); 
   } else if (!formData.eventType) { 
     return res.json({ message: "Please enter your event type" }); 
-  } else if (!formData.message) { 
-    return res.json({ message: "Please enter your message" }); 
-  } 
+  }
 
   try {
-    // Create a new contact inquiry document
-    const newContact = new ContactInquiry({
+    // Create a new event inquiry document
+    const newInquiries = new EventInquiries({
       name: formData.name,
       phone: phoneAsInt,
       email: formData.email,
       location: formData.location,
       eventType: formData.eventType,
-      eventDate: eventDate,
-      message: formData.message,
+      eventDate: eventDate
     });
 
-    // Save the contact inquiry to MongoDB
-    await newContact.save();
+    // Save the event inquiry to MongoDB
+    await newInquiries.save();
     console.log('Data inserted successfully!');
 
     // Now send the email
@@ -93,8 +91,7 @@ const contact = async (req, res) => {
         Email: ${formData.email}
         Location: ${formData.location}
         Event Type: ${formData.eventType}
-        Event Date: ${formData.date}
-        Message: ${formData.message}`,
+        Event Date: ${formData.date}`,
     };
 
     try {
@@ -112,4 +109,4 @@ const contact = async (req, res) => {
   }
 };
 
-module.exports = contact;
+module.exports = wedding;

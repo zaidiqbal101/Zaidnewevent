@@ -144,7 +144,7 @@ const ContactPage = () => {
           className="w-full p-3 bg-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-[#2F6158]"
         ></textarea>
 
-        <div className="flex items-center mb-4">
+        {/* <div className="flex items-center mb-4">
           <input
             type="checkbox"
             name="isRobot"
@@ -155,7 +155,7 @@ const ContactPage = () => {
           <label htmlFor="isRobot">I'm not a robot</label>
         </div>
 
-        <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+        <div className="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div> */}
 
         <button
           type="submit"
@@ -172,3 +172,4 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+  

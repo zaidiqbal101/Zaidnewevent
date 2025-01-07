@@ -78,6 +78,7 @@ const WeddingDelhi = () => {
     email: "",
     location: "",
     eventType: "",
+    eventDate: ""
     
   });
   const eventTypes = ["Wedding", "Birthday", "Corporate Event", "Baby Shower"];
@@ -125,18 +126,21 @@ const WeddingDelhi = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData); // Handle form submission logic here
-
-    const response =  axios.post('http://localhost:1200/saveFormData',formData);
-    response.then(response => {
-      console.log('Success:', response.data);
-      alert(response.data.message); // Show the success message from the server
-    }).catch(error => {
-      console.error('Error:', error);
-    });
+    try {
+      const response = await axios.post(
+        "http://localhost:1200/saveFormData",
+        formData
+      );
+      console.log("Success:", response.data);
+      alert(response.data.message); // Show success message
+      setIsModalOpen(false); // Close modal after submission
+      setFormData({ name: "", phone: "", email: "", location: "", eventType: "", eventDate: "" }); // Reset form
+    } catch (error) {
+      console.error("Error:", error);
+      alert("There was an error submitting the form. Please try again.");
+    }
   };
 
   
