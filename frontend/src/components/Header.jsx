@@ -49,7 +49,7 @@ const Header = () => {
       ],
     },
     { name: "Gallery", href: "/gallery" },
-    { name: "Blog", href: "/blogpage" },
+    { name: "Vlog", href: "/Vlogpage" },
     { name: "Contact Us", href: "/contactPage" },
   ];
 
