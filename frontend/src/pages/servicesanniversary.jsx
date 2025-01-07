@@ -26,10 +26,10 @@ const Faq = () => {
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
-      <h2 className="text-2xl text-rose-900 font-semibold mb-6 text-teal-900">
+      <h2 className="text-2xl text-[#351e2f] font-semibold mb-6">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-4 text-[#351e2f]">
         {questions.map((question, index) => (
           <div
             key={index}
@@ -137,7 +137,7 @@ const ServiceAnniversary = () => {
       });
   };
   return (
-    <div className="bg-rose-50 text-black py-12">
+    <div className="bg-[#351e2f] text-white py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">

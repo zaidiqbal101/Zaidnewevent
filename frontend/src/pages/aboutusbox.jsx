@@ -44,7 +44,7 @@ const AboutUsBox = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#290F23] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              className="bg-[#351e2f]  text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
             >
               {/* Icon */}
               <div className="text-4xl mb-4">{feature.icon}</div>
