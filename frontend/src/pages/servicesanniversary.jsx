@@ -168,106 +168,99 @@ const ServiceAnniversary = () => {
       </div>
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg w-full md:w-[40rem] lg:w-[50rem]">
-            <h2 className="text-2xl font-semibold mb-4">Plan Your Wedding</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Phone</label>
-                <input
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">
-                  Location
-                </label>
-                <input
-                  type="text"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Date</label>
-                <input
-                  type="date"
-                  name="eventDate"
-                  value={formData.eventDate}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Event Type
-                </label>
-                <select
-                  name="eventType"
-                  value={formData.eventType}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                >
-                  <option value="" disabled>
-                    Select an event type
-                  </option>
-                  {eventTypes.map((event, index) => (
-                    <option key={index} value={event}>
-                      {event}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="flex justify-end gap-4">
-                <button
-                  type="button"
-                  onClick={() => setIsModalOpen(false)}
-                  className="bg-gray-200 px-4 py-2 rounded-md"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="bg-teal-900 text-white px-4 py-2 rounded-md"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+    <div className="bg-white p-6 rounded-lg w-full md:w-[40rem] lg:w-[50rem]">
+      <h2 className="text-2xl font-semibold mb-4 text-black">Plan Your Wedding</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1 text-black">Name</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
+            required
+          />
         </div>
-      )}
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1 text-black">Phone</label>
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1 text-black">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1 text-black">Location</label>
+          <input
+            type="text"
+            name="location"
+            value={formData.location}
+            onChange={handleInputChange}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-black">Date</label>
+          <input
+            type="date"
+            name="eventDate"
+            value={formData.eventDate}
+            onChange={handleInputChange}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-black"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-black">Event Type</label>
+          <select
+            name="eventType"
+            value={formData.eventType}
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-black"
+          >
+            <option value="" disabled>Select an event type</option>
+            {eventTypes.map((event, index) => (
+              <option key={index} value={event}>{event}</option>
+            ))}
+          </select>
+        </div>
+        <div className="flex justify-end gap-4">
+          <button
+            type="button"
+            onClick={() => setIsModalOpen(false)}
+            className="bg-gray-400 px-4 py-2 rounded-md"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="bg-teal-900 text-white px-4 py-2 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+)}
+
       {/* Content Section */}
       <div className="bg-white text-teal-900 py-8 px-6 md:px-12 mt-12">
         <section className="bg-white text-gray-800 py-10">

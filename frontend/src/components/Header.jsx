@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Toggle dropdown
+  // Toggle dropdown on click
   const toggleDropdown = (name) => {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
@@ -100,9 +100,7 @@ const Header = () => {
                       <ChevronDownIcon className="w-4 h-4 ml-auto" />
                     </button>
                     <div
-                      className={`pl-4 ${
-                        activeDropdown === link.name ? "block" : "hidden"
-                      }`}
+                      className={`pl-4 ${activeDropdown === link.name ? "block" : "hidden"}`}
                     >
                       {link.dropdown.map((sublink, subIdx) => (
                         <a
@@ -138,19 +136,17 @@ const Header = () => {
                     <span>{link.name}</span>
                     <ChevronDownIcon className="w-4 h-4 ml-1" />
                   </button>
-                  {activeDropdown === link.name && (
-                    <div className="absolute left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-56 z-50">
-                      {link.dropdown.map((sublink, subIdx) => (
-                        <a
-                          key={subIdx}
-                          href={sublink.href}
-                          className="block px-4 py-2 hover:bg-gray-100"
-                        >
-                          {sublink.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                  <div className="absolute left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-56 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {link.dropdown.map((sublink, subIdx) => (
+                      <a
+                        key={subIdx}
+                        href={sublink.href}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        {sublink.name}
+                      </a>
+                    ))}
+                  </div>
                 </>
               ) : (
                 <a href={link.href} className="hover:text-yellow-400 block">
