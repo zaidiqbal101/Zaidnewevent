@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
  
 const Footer = () => { 
   return ( 
-    <footer className="bg-[#290F23] text-white py-12 rounded-tl-[90px]"> 
+    <footer className="bg-[#290F23] text-white pt-12 pb-4 rounded-tl-[90px]"> 
       <div className="container mx-auto px-4"> 
         {/* Planner Logo and Description */} 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"> 
@@ -57,10 +57,11 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="text-center text-sm text-gray-400 mt-8">
+        <div className="text-center text-sm text-gray-400">
           <p className="text-gray-400 ">
           Powered By<a href="https://nikatby.com/" className="text-gray-400 hover:text-white"> Nikatby Group</a>
           </p>
+          <p>H-169 , 1st Floor (up) Sector - 63, Noida Uttar Pradesh Pin-201301, <a href="tel:+91 9310842731">+91-931-0842731</a></p>
         </div>
       </div>
     </footer>
