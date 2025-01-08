@@ -8,27 +8,33 @@ const events = [
   {
     title: "Birthday",
     image: "/assets/birthday.png",
+    url:"/birthdaydelhi"
     
   },
   {
     title: "Anniversary",
     image: "/assets/pic1.png",
+    url:"/servicesanniversary"
   },
   {
     title: "Wedding",
     image: "/assets/wedding.png",
+    url:"/weddingdelhi"
   },
   {
     title: "Kitty Party",
     image: "/assets/kitty_party.png",
+    url:"/kittyparty"
   },
   {
     title: "Baby Shower",
     image: "/assets/baby_shower.png",
+    url:"/babyshower"
   },
   {
     title: "Retirement Party",
     image: "/assets/retirment.png",
+    url:"/retirementparty"
   },
 ];
 
@@ -46,6 +52,7 @@ const EventServices = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-10">
         {events.map((event, index) => (
+          <a href={event.url}>
           <div
             key={index}
             className="rounded-lg shadow-md overflow-hidden bg-white hover:scale-105 transform transition duration-300"
@@ -55,10 +62,11 @@ const EventServices = () => {
               alt={event.title}
               className="w-full h-72 object-cover"
             />
-            <div className="bg-rose-300 text-black text-center py-2">
+            <div className="bg-[#351e2f] text-white text-center py-2">
               <h2 className="text-lg font-medium">{event.title}</h2>
             </div>
           </div>
+          </a>
         ))}
       </div>
     </div>
