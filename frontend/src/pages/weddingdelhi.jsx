@@ -6,7 +6,8 @@ import RecentWeddings from "./recentwedding";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Brush, ClipboardCheck, DollarSign, Palette, PieChart, Users } from "lucide-react";
-
+import Loader from './Loader'
+import { triggerConfetti } from './partyBomb';
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -72,6 +73,7 @@ const Faq = () => {
 const WeddingDelhi = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setloading] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -128,18 +130,26 @@ const WeddingDelhi = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
+      setloading(true)
       const response = await axios.post(
         "http://localhost:1200/saveFormData",
         formData
       );
       console.log("Success:", response.data);
-      alert(response.data.message); // Show success message
-      setIsModalOpen(false); // Close modal after submission
+      setloading(false)
+      
+      // alert(response.data.message); // Show success message
       setFormData({ name: "", phone: "", email: "", location: "", eventType: "", eventDate: "" }); // Reset form
     } catch (error) {
       console.error("Error:", error);
       alert("There was an error submitting the form. Please try again.");
+    }finally{
+      setloading(false)
+      setIsModalOpen(false)
+      triggerConfetti()
+
     }
   };
 
@@ -148,6 +158,7 @@ const WeddingDelhi = () => {
     <div className="bg-[#351E30] text-black py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
+        {loading && <Loader/>}
         <div className="md:w-1/2 text-center text-white md:text-left">
           <h1 className="text-4xl font-bold mb-6 leading-snug">
             We are the Best <br />
