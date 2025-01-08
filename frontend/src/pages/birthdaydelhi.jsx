@@ -311,7 +311,7 @@ const BirthdayDelhi = () => {
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/birthday.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
@@ -323,7 +323,7 @@ const BirthdayDelhi = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/birthdayparty.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />

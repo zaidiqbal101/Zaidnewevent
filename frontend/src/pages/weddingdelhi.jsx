@@ -318,7 +318,7 @@ const WeddingDelhi = () => {
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/event.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
@@ -330,7 +330,7 @@ const WeddingDelhi = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/wedding.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
