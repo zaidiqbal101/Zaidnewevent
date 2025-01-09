@@ -170,7 +170,7 @@ const BirthdayDelhi = () => {
         {/* Right Image Section */}
         <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center">
           <img
-            src="/assets/gallery3.png"
+            src="/assets/birthdaycake.jpg"
             alt="Large Wedding Photo"
             className="rounded-lg shadow-lg w-full md:w-3/4 max-h-64 object-cover"
           />

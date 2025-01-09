@@ -108,7 +108,7 @@ const KittyParty = () => {
         {/* Right Image Section */}
         <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center">
           <img
-            src="/assets/gallery3.png"
+            src="/assets/kittyparty.jpg"
             alt="Large Wedding Photo"
             className="rounded-lg shadow-lg w-full md:w-3/4 max-h-64 object-cover"
           />
@@ -257,7 +257,7 @@ const KittyParty = () => {
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/kittyparty01.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
@@ -269,7 +269,7 @@ const KittyParty = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/kittyparty02.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
@@ -320,7 +320,7 @@ const KittyParty = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-[#351e2f] text-black p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="bg-[#351e2f] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
                   <div className="flex justify-center">
                     <div className="text-4xl mb-4">{feature.icon}</div>
