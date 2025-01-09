@@ -17,20 +17,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What baby shower services does Aryan Events offer?",
+    "Can Aryan Events create a custom theme for my baby shower?",
+    "How can I book a baby shower celebration with Aryan Events?",
+    "Do you offer catering services for baby showers?",
+    "What is the average cost of a baby shower celebration?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers a full range of services for baby showers, including venue decoration, catering, games and activities, party favors, entertainment, and customized baby shower themes. We ensure every detail is taken care of to create a joyous and memorable celebration.",
+    
+    "Yes, we specialize in creating custom themes for baby showers! Whether you prefer a gender-neutral, traditional, or creative theme, we can design the perfect look and feel for your celebration. From decorations to games, we make sure everything is tailored to your theme.",
+    
+    "Booking your baby shower celebration with Aryan Events is easy! Just reach out through our website or by phone to discuss your ideas. We'll help you select the right package, theme, and services to make your baby shower a special and stress-free event.",
+    
+    "Yes, we provide catering services for baby showers with a variety of menu options. Whether you’re looking for light snacks, a full meal, or a sweet dessert table, we can customize the catering to suit your taste and dietary preferences.",
+    
+    "The cost of a baby shower celebration varies depending on the number of guests, location, catering, and the services you choose. Aryan Events offers flexible packages to fit different budgets. Please contact us for a personalized quote based on your specific needs."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">

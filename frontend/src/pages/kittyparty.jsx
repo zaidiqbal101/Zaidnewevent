@@ -13,7 +13,68 @@ import {
   PieChart,
   Users,
 } from "lucide-react";
-import Faq from "./faq";
+// import Faq from "./faq";
+const Faq = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const questions = [
+    " What is a kitty party, and how can Aryan Events help?",
+    " How do I book a kitty party with Aryan Events",
+    "Can Aryan Events arrange a customized theme for my kitty party?",
+    "What services are included in a kitty party package?",
+    "How much does a typical kitty party cost?",
+  ];
+
+  const answers = [
+    "A kitty party is a social gathering, typically hosted by a group of women, where each member contributes a fixed amount of money into a 'kitty.' Aryan Events offers complete event management for kitty parties, including venue selection, catering, entertainment, and decorations, ensuring a memorable experience for all your guests.",
+    "You can easily book your kitty party with Aryan Events by filling out the booking form on our website or contacting our event coordinator directly. We will discuss your requirements, suggest the best packages, and confirm your booking at a date and time that suits you.",
+    "Yes, we specialize in creating customized themes for kitty parties based on your preferences. Whether it’s a traditional theme, a fun and funky setup, or a specific color scheme, we ensure that every detail aligns with your vision.",
+    "Our kitty party packages include venue decoration, catering, entertainment (such as games or music), party favors, and coordination of the entire event. Additional services like photography, invitations, and personalized gifts can be added at an extra cost.",
+    "The cost of a kitty party depends on the size of your group, location, theme, and services you choose. Aryan Events offers flexible packages tailored to suit different budgets. Please contact us for a detailed quote based on your specific needs.",
+  ];
+
+  return (
+    <div className="bg-gray-100 p-6 rounded-lg mt-12">
+      <h2 className="text-2xl text-[#351e2f] font-semibold mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div className="space-y-4 text-[#351e2f]">
+        {questions.map((question, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              className="flex items-center justify-between w-full p-4 bg-white hover:bg-gray-100"
+              onClick={() =>
+                setActiveIndex(index === activeIndex ? null : index)
+              }
+            >
+              <span>{question}</span>
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            {activeIndex === index && (
+              <div className="p-4 bg-gray-50">
+                <p>{answers[index]}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const KittyParty = () => {
   const navigate = useNavigate();

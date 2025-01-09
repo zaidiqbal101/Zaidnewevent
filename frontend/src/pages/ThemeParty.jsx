@@ -17,20 +17,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What theme party services does Aryan Events offer?",
+    "Can Aryan Events create a custom theme for my party?",
+    "How can I book a theme party with Aryan Events?",
+    "Do you offer catering services for theme parties?",
+    "What is the average cost of a theme party?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers full event planning services for theme parties, including custom decorations, catering, entertainment, party favors, and more. Whether you’re planning a costume party, retro theme, or any unique concept, we bring your ideas to life with creativity and attention to detail.",
+    
+    "Yes, we specialize in creating custom themes for parties! Whether you want a Halloween-themed party, a vintage style, or something entirely unique, we can design and execute the perfect theme to suit your vision and ensure your guests have a fantastic time.",
+    
+    "Booking your theme party with Aryan Events is simple! Reach out via our website or by phone to discuss your ideas. We'll help you choose the perfect theme, finalize your party details, and provide you with a tailored package to bring your theme to life.",
+    
+    "Yes, we provide catering services for theme parties, offering a variety of menu options that match your party’s theme. From themed snacks and drinks to a full-course meal, we ensure the catering fits the overall atmosphere of your event.",
+    
+    "The cost of a theme party depends on factors such as the number of guests, the complexity of the theme, venue, catering, and additional services. Aryan Events offers flexible packages to suit different budgets. Contact us for a personalized quote based on your party’s theme and requirements."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
@@ -399,7 +404,7 @@ const ThemeParty = () => {
         </section>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center gap-4 mt-14">
+        {/* <div className="flex justify-center gap-4 mt-14">
           <Link
             to="/weddingnoida"
             className="bg-[#351e2f]  text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
@@ -412,7 +417,7 @@ const ThemeParty = () => {
           >
             Wedding Planner in Gurgaon
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Weddingcontact />

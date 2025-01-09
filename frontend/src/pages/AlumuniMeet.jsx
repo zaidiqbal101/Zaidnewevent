@@ -17,20 +17,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What services does Aryan Events offer for alumni meets?",
+    "Can Aryan Events help organize a memorable alumni meet with specific themes?",
+    "How can I book an alumni meet with Aryan Events?",
+    "Do you provide services like event photography or video recording for alumni meets?",
+    "What is the average cost of hosting an alumni meet?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers complete event planning for alumni meets, including venue decoration, catering, entertainment, class year memorabilia, and more. We ensure that the event fosters a sense of nostalgia and reconnection among alumni while creating a welcoming environment for everyone.",
+    
+    "Yes, we can help you create a unique and memorable alumni meet with a custom theme. Whether you want to highlight the history of your school, a particular decade, or your alumni’s achievements, we will design the perfect theme and set the right atmosphere for your event.",
+    
+    "Booking your alumni meet with Aryan Events is easy! You can get in touch with us through our website or by phone to discuss your event’s vision. We will work closely with you to finalize details such as the venue, catering, activities, and any special requests you may have.",
+    
+    "Absolutely! We offer services like professional event photography, video recording, and live streaming to capture the unforgettable moments at your alumni meet. Whether it's candid photos, group shots, or a highlight video, we’ll ensure all the special moments are recorded and remembered.",
+    
+    "The cost of hosting an alumni meet varies depending on factors like the number of guests, the venue, catering, entertainment, and additional services like photography or event décor. Aryan Events offers flexible packages that can be tailored to your budget. Contact us for a personalized quote based on your event needs."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">

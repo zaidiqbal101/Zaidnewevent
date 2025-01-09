@@ -17,20 +17,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What birthday party services does Aryan Events offer?",
+    "Can Aryan Events create a custom theme for my birthday party?",
+    "How can I book a birthday party with Aryan Events?",
+    "Do you offer catering services for birthday parties?",
+    "What is the average cost of hosting a birthday party?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers full event planning for birthday parties, including venue decoration, catering, entertainment, party favors, custom themes, and much more. Whether you're planning a kid's birthday or an adult celebration, we provide everything you need for a fun and memorable party.",
+    
+    "Yes, we specialize in creating custom themes for birthday parties! Whether you prefer a fun, playful theme for a child's birthday or an elegant and sophisticated theme for an adult celebration, we can design everything to match your vision and make your birthday party unique.",
+    
+    "Booking your birthday party with Aryan Events is simple! Reach out through our website or by phone to discuss your party’s details. We’ll help you choose the best venue, cater to your specific needs, and plan the perfect package for your celebration.",
+    
+    "Yes, we provide catering services for birthday parties, offering a wide variety of menu options. From casual snacks and finger foods to formal sit-down meals, we can customize the catering to fit your theme, guest preferences, and dietary needs.",
+    
+    "The cost of hosting a birthday party depends on factors such as the number of guests, venue, catering, entertainment, and décor. Aryan Events offers flexible packages to suit different budgets. Contact us for a personalized quote based on your specific party requirements."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
