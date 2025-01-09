@@ -6,16 +6,16 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Toggle dropdown on click
+  // Only used for mobile menu
   const toggleDropdown = (name) => {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
 
-  // Close dropdown on outside click
+  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(".dropdown")) {
-        setActiveDropdown(null);
+      if (!event.target.closest(".mobile-menu")) {
+        setIsMenuOpen(false);
       }
     };
 
@@ -77,7 +77,7 @@ const Header = () => {
 
         {/* Sidebar for small screens */}
         <div
-          className={`fixed top-0 left-0 w-64 h-full bg-[#290f22] text-white z-50 transform transition-transform ${
+          className={`fixed top-0 left-0 w-64 h-full bg-[#290f22] text-white z-50 transform transition-transform mobile-menu ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } lg:hidden`}
         >
@@ -89,7 +89,7 @@ const Header = () => {
           </button>
           <nav className="mt-10">
             {links.map((link, idx) => (
-              <div key={idx} className="px-4 py-2 dropdown">
+              <div key={idx} className="px-4 py-2">
                 {link.dropdown ? (
                   <>
                     <button
@@ -100,7 +100,9 @@ const Header = () => {
                       <ChevronDownIcon className="w-4 h-4 ml-auto" />
                     </button>
                     <div
-                      className={`pl-4 ${activeDropdown === link.name ? "block" : "hidden"}`}
+                      className={`pl-4 space-y-2 mt-2 ${
+                        activeDropdown === link.name ? "block" : "hidden"
+                      }`}
                     >
                       {link.dropdown.map((sublink, subIdx) => (
                         <a
@@ -124,19 +126,16 @@ const Header = () => {
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden lg:flex lg:items-center lg:space-x-6 z-50">
+        <nav className="hidden lg:flex lg:items-center lg:space-x-6">
           {links.map((link, idx) => (
-            <div key={idx} className="relative group dropdown">
+            <div key={idx} className="relative group">
               {link.dropdown ? (
-                <>
-                  <button
-                    className="hover:text-yellow-400 flex items-center"
-                    onClick={() => toggleDropdown(link.name)}
-                  >
+                <div className="relative">
+                  <button className="hover:text-yellow-400 flex items-center peer">
                     <span>{link.name}</span>
                     <ChevronDownIcon className="w-4 h-4 ml-1" />
                   </button>
-                  <div className="absolute left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-56 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-56 invisible peer-hover:visible hover:visible transition-all duration-300 opacity-0 peer-hover:opacity-100 hover:opacity-100">
                     {link.dropdown.map((sublink, subIdx) => (
                       <a
                         key={subIdx}
@@ -147,7 +146,7 @@ const Header = () => {
                       </a>
                     ))}
                   </div>
-                </>
+                </div>
               ) : (
                 <a href={link.href} className="hover:text-yellow-400 block">
                   {link.name}
