@@ -170,7 +170,7 @@ const BirthdayDelhi = () => {
         {/* Right Image Section */}
         <div className="md:w-1/2 mt-6 md:mt-0 flex justify-center">
           <img
-            src="/assets/gallery3.png"
+            src="/assets/birthdaycake.jpg"
             alt="Large Wedding Photo"
             className="rounded-lg shadow-lg w-full md:w-3/4 max-h-64 object-cover"
           />
@@ -311,7 +311,7 @@ const BirthdayDelhi = () => {
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/birthday.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
@@ -323,7 +323,7 @@ const BirthdayDelhi = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-1/3 mt-8 md:mt-0">
               <img
-                src="/assets/pic4.png"
+                src="/assets/birthdayparty.jpg"
                 alt="Event Planner"
                 className="rounded-lg shadow-lg h-96 object-cover"
               />
