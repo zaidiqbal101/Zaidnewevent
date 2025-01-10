@@ -150,11 +150,11 @@ const RetirementParty = () => {
       });
   };
   return (
-    <div className="bg-[#0B1C3E] text-white py-12">
+    <div className="bg-[#162d5d] text-white py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl font-bold mb-6 leading-snug">
+          <h1 className="text-6xl philosopher-bold mb-6 leading-snug bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent ">
             Retirement Party <br />
             Planners in Gaya
           </h1>
@@ -293,11 +293,11 @@ const RetirementParty = () => {
       )}
 
       {/* Content Section */}
-      <div className="bg-white text-teal-900 py-8 px-6 md:px-12 mt-12">
+      <div className="bg-white py-8 px-6 md:px-12 mt-12">
         <section className="bg-white text-gray-800 py-10">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold text-[#0B1C3E] mb-4">
+              <h2 className="text-6xl philosopher-bold text-[#0B1C3E] mb-4">
                 Best Wedding Planner in Gaya : Making Every Moment Magical
               </h2>
 
@@ -340,7 +340,7 @@ const RetirementParty = () => {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h2 className="text-3xl font-bold text-[#0B1C3E]  mb-4">
+              <h2 className="text-6xl philosopher-bold text-[#0B1C3E]  mb-4">
                 Why Aryan Events is Your Trusted Wedding Planner in Gaya, NCR
               </h2>
               <p className="mb-4 leading-relaxed">
@@ -371,10 +371,10 @@ const RetirementParty = () => {
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-[#0B1C3E]  mb-6">
+            <h2 className="text-5xl philosopher-bold text-[#0B1C3E]  mb-6">
               End-to-End Wedding Services: From Planning to Execution
             </h2>
-            <p className="text-gray-600 text-lg mb-12">
+            <p className="text-gray-600 text-xl philosopher-regular mb-12">
               From comprehensive and meticulous planning to seamless and
               flawless execution, we’ve got you covered at every step of the
               process.
@@ -390,7 +390,7 @@ const RetirementParty = () => {
                   <div className="flex justify-center">
                     <div className="text-4xl mb-4">{feature.icon}</div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">
+                  <h3 className="text-2xl philosopher-regular mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">
                     {feature.title}
                   </h3>
                   <p className="text-sm leading-relaxed">

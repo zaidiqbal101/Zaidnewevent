@@ -42,10 +42,10 @@ const EventServices = () => {
   return (
     <div className="bg-gray-100 py-10 mt-18">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-[#290F24]">
+        <h1 className="text-6xl philosopher-bold text-[#12244A]">
           Event Services By Aryan Events
         </h1>
-        <p className="text-lg text-gray-600 mt-2">
+        <p className="text-xl text-gray-600 philosopher-regular mt-2">
           Discover a wide range of event solutions designed to make every
           occasion special.
         </p>
@@ -63,7 +63,7 @@ const EventServices = () => {
               className="w-full h-72 object-cover"
             />
             <div className="bg-[#11244A] text-white text-center py-2">
-              <h2 className="text-lg font-medium">{event.title}</h2>
+              <h2 className="text-xl philosopher-regular bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">{event.title}</h2>
             </div>
           </div>
           </a>
@@ -266,10 +266,10 @@ const MainContent = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-[#341f2e] mb-6">
+          <h2 className="text-6xl philosopher-bold text-[#12244A] mb-6">
           "Why Trust Aryan Events for Your Special Occasions?"
           </h2>
-          <p className="text-[#362431] text-lg mb-12">
+          <p className="text-[#12244A] text-xl philosopher-regular mb-12">
           As premier social event organizers in Gaya, Aryan Events is dedicated to
            creating unforgettable experiences tailored to your unique vision and vibrant 
            personality. Let us transform your celebrations into extraordinary moments.
@@ -289,7 +289,7 @@ const MainContent = () => {
                   <div className="text-4xl">{feature.icon}</div>
                 </div>
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                <h3 className="text-2xl philosopher-regular mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">{feature.title}</h3>
                 {/* Description */}
                 <p className="text-sm leading-relaxed">{feature.description}</p>
               </div>
@@ -306,10 +306,10 @@ const MainContent = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-[#290F24] mb-6">
+          <h2 className="text-6xl philosopher-bold text-[#12244A] mb-6">
             Event Excellence Redefined
           </h2>
-          <p className="text-gray-600 text-lg mb-12">
+          <p className="text-gray-600 text-xl philosopher-regular mb-12">
             From intimate gatherings to grand celebrations, we ensure every
             detail is perfect. Experience seamless planning and unforgettable
             moments with us.
@@ -327,7 +327,7 @@ const MainContent = () => {
                   <div className="text-4xl">{excellent.icon}</div>
                 </div>
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className="text-2xl philosopher-regular mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">
                   {excellent.title}
                 </h3>
                 {/* Description */}

@@ -92,7 +92,7 @@ const ContactPage = () => {
       {loading && <Loader/>}
       <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-12 text-white flex justify-center items-center">
         <div className="text-left">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-yellow-400 font-semibold mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-6xl bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent philosopher-bold mb-6">
             Let's Talk About Your Event
           </h1>
           <p className="mb-8 text-sm sm:text-base lg:text-lg text-white">

@@ -34,8 +34,8 @@ const Gallery = () => {
     <div className="bg-gray-100 py-10">
       {/* Title Section */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl text-rose-900 font-bold text-gray-800">Gallery</h1>
-        <p className="text-lg text-gray-600 mt-2">
+        <h1 className="text-6xl text-[#11244A] philosopher-bold">Gallery</h1>
+        <p className="text-xl text-gray-600 philosopher-regular mt-2">
           Dedicated to creating lasting memories, we prioritize your special day’s significance.
           Trust us to exceed expectations, cherishing every moment with you.
         </p>
