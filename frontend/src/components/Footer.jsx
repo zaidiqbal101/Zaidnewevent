@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
  
 const Footer = () => { 
   return ( 
-    <footer className="bg-[#290F23] text-white pt-12 pb-4 rounded-tl-[90px]"> 
+    <footer className="bg-[#0B1C3E] text-white pt-12 pb-4 rounded-tl-[90px]"> 
       <div className="container mx-auto px-4"> 
         {/* Planner Logo and Description */} 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"> 
@@ -22,20 +22,20 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> 
             {/* Useful Links Section */} 
             <div> 
-              <h4 className="text-xl font-semibold mb-4">Useful Links</h4> 
+              <h4 className="philosopher-regular text-2xl font-semibold mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">Useful Links</h4> 
               <ul className="space-y-2"> 
-                <li><a href="/" className="text-gray-400 hover:text-white">Home</a></li> 
-                <li><a href="/aboutus" className="text-gray-400 hover:text-white">About</a></li> 
-                <li><a href="/gallery" className="text-gray-400 hover:text-white">Gallery</a></li> 
-                <li><a href="/contactpage" className="text-gray-400 hover:text-white">Contact Us</a></li> 
+                <li><a href="/" className="text-gray-400 philosopher-regular hover:text-white">Home</a></li> 
+                <li><a href="/aboutus" className="text-gray-400 philosopher-regular hover:text-white">About</a></li> 
+                <li><a href="/gallery" className="text-gray-400 philosopher-regular hover:text-white">Gallery</a></li> 
+                <li><a href="/contactpage" className="text-gray-400 philosopher-regular hover:text-white">Contact Us</a></li> 
                
               </ul> 
             </div> 
  
             {/* Contact Info Section */} 
             <div> 
-              <h4 className="text-xl font-semibold mb-4">Contact Us</h4> 
-              <ul className="space-y-2"> 
+              <h4 className="philosopher-regular text-2xl font-semibold mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">Contact Us</h4> 
+              <ul className="space-y-2 philosopher-regular"> 
                 <li>Kujapi Gaya  <br /> Pin Code-823002</li> 
                 <li><a href="mailto:aryaneventsplanner@gmail.com" className="text-gray-400 hover:text-white">aryaneventsplanner@gmail.com</a></li> 
                 <li><a href="tel:+91 9220565444" className="text-gray-400 hover:text-white">+91 9220565444</a></li> 
@@ -47,7 +47,7 @@ const Footer = () => {
  
         {/* Social Media Links */}
         <div className="mb-8 text-center md:text-left">
-          <h4 className="text-xl font-semibold mb-4">Let's Connect</h4>
+          <h4 className="text-xl font-semibold mb-4 philosopher-regular">Let's Connect</h4>
           <ul className="flex justify-center md:justify-start space-x-4">
             <li><a href="https://www.instagram.com/aryanevent.in/" className="text-gray-400 hover:text-white"><FaInstagram size={24} /></a></li>
             <li><a href="https://www.facebook.com/aryaneventgaya" className="text-gray-400 hover:text-white"><FaFacebook size={24} /></a></li>

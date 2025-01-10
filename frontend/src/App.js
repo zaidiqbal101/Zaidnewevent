@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import AppRoute from "./routes/AppRoute";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

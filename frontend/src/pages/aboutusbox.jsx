@@ -29,13 +29,13 @@ const features = [
 
 const AboutUsBox = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="py-16">
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-[#290F23] mb-6">
+        <h2 className="text-6xl philosopher-bold text-[#11244A] mb-6">
         What Makes Us Unique
         </h2>
-        <p className="text-gray-600 text-lg mb-12">
+        <p className="text-gray-600 text-xl philosopher-regular mb-12">
         Your one-stop destination for all your event needs, providing holistic solutions to ensure a smooth and unforgettable experience.
         </p>
 
@@ -44,12 +44,12 @@ const AboutUsBox = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#351e2f]  text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              className="bg-[#11244A]  text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
             >
               {/* Icon */}
               <div className="text-4xl mb-4">{feature.icon}</div>
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+              <h3 className=" philosopher-regular text-2xl font-semibold mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">{feature.title}</h3>
               {/* Description */}
               <p className="text-sm leading-relaxed">{feature.description}</p>
             </div>

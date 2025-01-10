@@ -16,10 +16,10 @@ const About = () => {
 
         {/* Right Side: Content */}
         <div className="w-full lg:w-1/2">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#351E30] mb-4 lg:mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-6xl font-bold philosopher-bold text-[#11244A] mb-4 lg:mb-6">
             About Aryan Events
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-4 lg:mb-8">
+          <p className="text-base sm:text-lg lg:text-2xl text-[#11244A] philosopher-regular mb-4 lg:mb-8">
             Creators of Timeless Celebrations!
           </p>
           <div className="max-w-full lg:max-w-3xl">

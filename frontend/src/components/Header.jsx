@@ -54,7 +54,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-[#290f22] text-white z-50 relative">
+    <header className="bg-[#11244A] text-white philosopher-regular z-50 relative">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div>
@@ -77,7 +77,7 @@ const Header = () => {
 
         {/* Sidebar for small screens */}
         <div
-          className={`fixed top-0 left-0 w-64 h-full bg-[#290f22] text-white z-50 transform transition-transform mobile-menu ${
+          className={`fixed top-0 left-0 w-64 h-full bg-[#11244A] text-white z-50 transform transition-transform mobile-menu ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } lg:hidden`}
         >
@@ -93,7 +93,7 @@ const Header = () => {
                 {link.dropdown ? (
                   <>
                     <button
-                      className="flex items-center w-full text-left hover:text-yellow-400"
+                      className="flex items-center w-full text-left hover:text-yellow-400 "
                       onClick={() => toggleDropdown(link.name)}
                     >
                       <span>{link.name}</span>
@@ -126,7 +126,7 @@ const Header = () => {
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden lg:flex lg:items-center lg:space-x-6">
+        <nav className="hidden lg:flex lg:items-center lg:space-x-6 ">
           {links.map((link, idx) => (
             <div key={idx} className="relative group">
               {link.dropdown ? (

@@ -87,7 +87,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#351e2f] flex flex-wrap">
+    <div className="min-h-screen bg-[#0B1C3E] flex flex-wrap">
      {/* Left Side Content */}
       {loading && <Loader/>}
       <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-12 text-white flex justify-center items-center">
@@ -197,7 +197,7 @@ const ContactPage = () => {
 
             <button
               type="submit"
-              className="bg-[#290F23] text-white px-8 py-2 rounded hover:bg-[#351E30] transition-colors"
+              className="bg-[#0B1C3E] text-white px-8 py-2 rounded hover:bg-[#351E30] transition-colors"
             >
               {loading ? 'Loading...' : 'Submit'}
             </button>

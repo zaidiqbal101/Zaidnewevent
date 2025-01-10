@@ -48,11 +48,11 @@ const Weddingcontact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#290F23] flex flex-wrap lg:flex-nowrap">
+    <div className="min-h-screen bg-[#0B1C3E] flex flex-wrap lg:flex-nowrap">
   {/* Left Side Content */}
   <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-12 text-white flex justify-center items-center">
     <div className="text-left">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl text-yellow-400 font-semibold mb-4 sm:mb-6">
+      <h1 className="text-2xl sm:text-3xl lg:text-5xl bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent philosopher-bold font-semibold mb-4 sm:mb-6">
         Let's Plan Your Dream Wedding
       </h1>
       <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
@@ -169,7 +169,7 @@ const Weddingcontact = () => {
         ></div>
         <button
           type="submit"
-          className="w-full bg-[#290F23] text-white px-8 py-2 rounded hover:bg-[#351E30] transition-colors"
+          className="w-full bg-[#0B1C3E] text-white px-8 py-2 rounded hover:bg-[#351E30] transition-colors"
         >
           Submit
         </button>

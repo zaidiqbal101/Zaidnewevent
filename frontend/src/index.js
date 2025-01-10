@@ -30,39 +30,39 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Detect if developer tools are open
-(function detectDevTools() {
-  let open = false;
-  const threshold = 160;
+// (function detectDevTools() {
+//   let open = false;
+//   const threshold = 160;
 
-  const devtools = {
-    open: false,
-    orientation: null,
-  };
+//   const devtools = {
+//     open: false,
+//     orientation: null,
+//   };
 
-  setInterval(() => {
-    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-    const orientation = widthThreshold ? 'vertical' : 'horizontal';
+//   setInterval(() => {
+//     const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+//     const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+//     const orientation = widthThreshold ? 'vertical' : 'horizontal';
 
-    if (
-      !(heightThreshold && widthThreshold) &&
-      ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) ||
-        widthThreshold ||
-        heightThreshold)
-    ) {
-      if (!devtools.open || devtools.orientation !== orientation) {
-        devtools.open = true;
-        devtools.orientation = orientation;
-        console.log('Developer tools are open!');
-        alert('Please close developer tools to continue using this page.');
-        window.location = 'about:blank'; // Optional: Redirect to a blank page
-      }
-    } else {
-      devtools.open = false;
-      devtools.orientation = null;
-    }
-  }, 500);
-})();
+//     if (
+//       !(heightThreshold && widthThreshold) &&
+//       ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) ||
+//         widthThreshold ||
+//         heightThreshold)
+//     ) {
+//       if (!devtools.open || devtools.orientation !== orientation) {
+//         devtools.open = true;
+//         devtools.orientation = orientation;
+//         console.log('Developer tools are open!');
+//         alert('Please close developer tools to continue using this page.');
+//         window.location = 'about:blank'; // Optional: Redirect to a blank page
+//       }
+//     } else {
+//       devtools.open = false;
+//       devtools.orientation = null;
+//     }
+//   }, 500);
+// })();
 
 
 // Disable double-click
