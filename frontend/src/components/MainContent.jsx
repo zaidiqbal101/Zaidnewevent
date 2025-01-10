@@ -40,7 +40,7 @@ const events = [
 
 const EventServices = () => {
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="bg-gray-100 py-10 mt-18">
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-[#290F24]">
           Event Services By Aryan Events
@@ -62,7 +62,7 @@ const EventServices = () => {
               alt={event.title}
               className="w-full h-72 object-cover"
             />
-            <div className="bg-[#351e2f] text-white text-center py-2">
+            <div className="bg-[#11244A] text-white text-center py-2">
               <h2 className="text-lg font-medium">{event.title}</h2>
             </div>
           </div>
@@ -93,42 +93,42 @@ const MainContent = () => {
       title: "Effortless Event Planning",
       description:
         "Relax and enjoy your special moments while we take care of every detail. From setup to execution, our team ensures a flawlessly coordinated event experience.",
-      borderColor: "bg-[#351e2f] text-white",
+      borderColor: "bg-[#11244A] text-white",
     },
     {
       icon: <DollarSign className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a green color
       title: "Affordable Event Solutions",
       description:
         "We design and execute events that fit your budget, combining smart planning and expert negotiation to deliver exceptional value without compromising quality.",
-      borderColor: "bg-[#351e2f] text-white",
+      borderColor: "bg-[#11244A] text-white",
     },
     {
       icon: <Users className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a blue color
       title: "Experienced Professionals",
       description:
         "With years of expertise, our team is equipped to handle all the challenges of event management, ensuring your celebration is stress-free and memorable.",
-      borderColor: "bg-[#351e2f] text-white",
+      borderColor: "bg-[#11244A] text-white",
     },
     {
       icon: <PieChart className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a purple color
       title: "Transparent Budget Management",
       description:
         "We help you set a budget that aligns with your vision and maintain full transparency, ensuring you get the most value out of your investment.",
-      borderColor: "bg-[#351e2f] text-white",
+      borderColor: "bg-[#11244A] text-white",
     },
     {
       icon: <Palette className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with a yellow color
       title: "Custom-Crafted Events",
       description:
         "Every event is designed to reflect your unique style and preferences. We work closely with you to bring your vision to life, creating unforgettable experiences.",
-      borderColor: "bg-[#351e2f] text-white",
+      borderColor: "bg-[#11244A] text-white",
     },
     {
       icon: <Brush className="text-white w-12 h-12" strokeWidth={1} />, // Icon styled with an indigo color
       title: "Tailored Event Experiences",
       description:
         "Our personalized approach ensures every detail of your event resonates with your personality, leaving you and your guests with cherished memories.",
-      borderColor: "bg-[#351e2f] text-white",
+      borderColor: "bg-[#11244A] text-white",
     },
   ];
   
@@ -208,10 +208,10 @@ const MainContent = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
           {/* Text Content */}
           <div className="md:w-2/3">
-            <h2 className="text-3xl font-bold text-[#341f2e] mb-4">
+            <h2 className="text-5xl philosopher-bold font-bold text-[#11244A] mb-4">
               Top Wedding and Event Management Company in Gaya
             </h2>
-            <h3 className="text-xl font-semibold mb-6">
+            <h3 className="text-2xl font-semibold philosopher-regular mb-6">
               Aryan Events: Best Event Planners in Gaya , India
             </h3>
             <p className="mb-4 leading-relaxed">
@@ -245,7 +245,7 @@ const MainContent = () => {
             </p><br/>
             <Link
               to="/contactPage"
-              className="bg-[#341f2e] text-white px-4 py-2 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
+              className="bg-[#11244A] text-white px-4 py-2 rounded-lg text-xl font-semibold hover:bg-[#0B1C3E] transition duration-300"
             >
               Contact Us
             </Link>
@@ -320,7 +320,7 @@ const MainContent = () => {
             {excellence.map((excellent, index) => (
               <div
                 key={index}
-                className="bg-[#351e2f] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                className="bg-[#11244A] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
                 {/*Icon*/}
                 <div className="flex justify-center items-center mb-4">
@@ -340,7 +340,7 @@ const MainContent = () => {
           <div className="mt-8">
             <Link
               to="/aboutus"
-              className=" bg-[#351e2f] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-[#290F24] hover:shadow-md transition duration-300"
+              className=" bg-[#11244A] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-[#0B1C3E] hover:shadow-md transition duration-300"
             >
               Know More
             </Link>

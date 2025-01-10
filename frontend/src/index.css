@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body{
     overflow-x: hidden;
@@ -17,5 +17,29 @@ img {
     -moz-user-select: none; /* For Firefox */
     -webkit-user-drag: none; /* For Chrome and other WebKit browsers */
     -webkit-user-select: none; /* For Chrome and other WebKit browsers */
+  }
+
+  .philosopher-regular {
+    font-family: "Philosopher", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .philosopher-bold {
+    font-family: "Philosopher", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .philosopher-regular-italic {
+    font-family: "Philosopher", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .philosopher-bold-italic {
+    font-family: "Philosopher", serif;
+    font-weight: 700;
+    font-style: italic;
   }
   

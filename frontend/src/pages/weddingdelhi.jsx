@@ -155,17 +155,17 @@ const WeddingDelhi = () => {
 
   
   return (
-    <div className="bg-[#351E30] text-black py-12">
+    <div className="bg-[#162d5d] text-black py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         {loading && <Loader/>}
         <div className="md:w-1/2 text-center text-white md:text-left">
-          <h1 className="text-4xl font-bold mb-6 leading-snug">
+          <h1 className="text-6xl font-bold  philosopher-bold mb-6 leading-snug">
             We are the Best <br />
-            <span className="text-yellow-400">Destination Wedding</span> <br />
+            <span className="bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">Destination Wedding</span> <br />
             Planners in Gaya
           </h1>
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-8 philosopher-regular">
             Your wedding should tell your story, and we at Aryan Events are
             here to bring your dream celebration to life with our expertise.
           </p>
@@ -293,7 +293,7 @@ const WeddingDelhi = () => {
         <section className="bg-white text-gray-800 py-10">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold text-[#290F23] mb-4">
+              <h2 className="text-5xl font-bold text-[#11244A] mb-4 philosopher-bold">
                 Best Wedding Planner in Gaya
               </h2>
 
@@ -336,7 +336,7 @@ const WeddingDelhi = () => {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h2 className="text-3xl font-bold text-[#290F23] mb-4">
+              <h2 className="text-5xl font-bold text-[#11244A] mb-4 philosopher-bold">
                 Why Aryan Events is Your Trusted Wedding Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
@@ -367,10 +367,10 @@ const WeddingDelhi = () => {
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-[#290F23] mb-6">
+            <h2 className="text-5xl font-bold text-[#11244A] mb-6 philosopher-bold">
               End-to-End Wedding Services: From Planning to Execution
             </h2>
-            <p className="text-gray-600 text-lg mb-12">
+            <p className="text-gray-600 text-xl mb-12 philosopher-regular">
               From comprehensive and meticulous planning to seamless and
               flawless execution, we’ve got you covered at every step of the
               process..
@@ -381,12 +381,12 @@ const WeddingDelhi = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-[#351e2f] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="bg-[#11244A] text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
                 >
                  <div className="flex justify-center">
                  <div className="text-4xl mb-4">{feature.icon}</div>
                  </div>
-                  <h3 className="text-xl font-semibold mb-4">
+                  <h3 className="text-2xl bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent font-semibold mb-4 philosopher-regular">
                     {feature.title}
                   </h3>
                   <p className="text-sm leading-relaxed">
@@ -402,13 +402,13 @@ const WeddingDelhi = () => {
         <div className="flex justify-center gap-4 mt-14">
         {/* <Link
               to="/weddingnoida"
-              className="bg-[#290F23] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-[#3f313c] transition duration-300"
+              className="bg-[#11244A] text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-[#3f313c] transition duration-300"
             >
               Wedding Planner In Noida
             </Link>
           <button
             onClick={() => navigate("/pages/weddinggurgaon")}
-            className="bg-[#290F23] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#3f313c] transition-all"
+            className="bg-[#11244A] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#3f313c] transition-all"
           >
             Wedding Planner in Gurgaon
           </button> */}

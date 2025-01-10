@@ -45,9 +45,9 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <div className="bg-[#290F23] py-10">
+    <div className="bg-[#0B1C3E] py-10">
       <div className="container mx-auto px-6">
-        <h1 className="text-center text-white text-4xl font-bold mb-12">
+        <h1 className="text-center philosopher-bold bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent text-6xl font-bold mb-12 py-5">
           Wedding Services
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,7 +57,7 @@ const ServicesPage = () => {
               key={index}
               className="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-lg shadow-lg flex flex-col justify-between h-full"
             >
-              <h2 className="text-white text-2xl font-semibold mb-4">
+              <h2 className="philosopher-regular text-2xl font-semibold mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">
                 {service.title}
               </h2>
               <p className="text-white mb-4">{service.description}</p>
@@ -79,7 +79,7 @@ const ServicesPage = () => {
               key={index}
               className="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-lg shadow-lg flex flex-col justify-between h-full"
             >
-              <h2 className="text-white text-2xl font-semibold mb-4">
+              <h2 className="philosopher-regular text-2xl font-semibold mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">
                 {service.title}
               </h2>
               <p className="text-white mb-4">{service.description}</p>
