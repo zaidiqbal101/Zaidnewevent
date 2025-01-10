@@ -10,19 +10,19 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    " What anniversary celebration services does Aryan Events offer?",
+    "Can Aryan Events create a custom theme for my anniversary celebration?",
+    "How can I book an anniversary celebration with Aryan Events?",
+    " Do you offer catering services for anniversary celebrations?",
+    "What is the average cost of an anniversary celebration?",
   ];
 
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers full event planning and management services for anniversary celebrations, including venue decoration, catering, entertainment, live music, photography, and personalized anniversary themes. We work with you to create an unforgettable experience for you and your guests.",
+    "Absolutely! Whether you want a romantic theme, vintage style, or something fun and unique, Aryan Events specializes in customizing anniversary themes. We take care of everything, from the decor to the ambiance, to ensure your celebration reflects your personal style and love story.",
+    "Booking your anniversary celebration with Aryan Events is easy! Simply reach out to us via our website or by phone to discuss your requirements. We’ll offer personalized packages and confirm the details of your event, from the date to the theme and all the services in between.",
+    "Yes, we provide catering services for anniversary celebrations, offering a variety of menu options to suit your taste. Whether you prefer a traditional meal or a themed menu, we can customize the catering to match your celebration’s style and dietary preferences.",
+    "The cost of an anniversary celebration depends on factors like the number of guests, venue, catering, and additional services like entertainment or photography. Aryan Events offers a range of packages to suit different budgets. Contact us for a personalized quote based on your specific requirements.",
   ];
 
   return (

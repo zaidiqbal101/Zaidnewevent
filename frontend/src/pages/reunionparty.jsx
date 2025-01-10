@@ -17,20 +17,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What reunion party services does Aryan Events offer?",
+    "Can Aryan Events help me organize a class or family reunion?",
+    "How can I book a reunion party with Aryan Events?",
+    "Do you provide services for creating reunion party memories, such as photo booths or video montages?",
+    "What is the average cost of hosting a reunion party?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers complete event management services for reunion parties, including venue decoration, catering, entertainment, memory lanes (such as photo walls or slideshows), and coordination of group activities. We ensure your reunion is filled with fun, nostalgia, and special moments.",
+    
+    "Absolutely! Whether you’re planning a family reunion, school class reunion, or a work reunion, we specialize in organizing these types of events. We’ll create a personalized plan that includes the perfect theme, activities, and services tailored to your group’s needs and preferences.",
+    
+    "Booking a reunion party with Aryan Events is easy! Just reach out through our website or by phone to discuss your party’s needs. We’ll assist you with selecting the right venue, catering, entertainment, and a personalized package to ensure your reunion is unforgettable.",
+    
+    "Yes, we can provide services to help you capture the essence of your reunion, including photo booths, video montages, and memory books. Whether it’s printing photos on-site or creating a custom video montage, we add those special touches to keep the memories alive long after the party.",
+    
+    "The cost of hosting a reunion party depends on factors like the number of guests, the venue, catering, and additional services like entertainment and photography. Aryan Events offers a range of packages to accommodate different budgets. Contact us for a tailored quote based on your reunion requirements."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
@@ -398,7 +403,7 @@ const ReunionParty = () => {
         </section>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center gap-4 mt-14">
+        {/* <div className="flex justify-center gap-4 mt-14">
           <Link
             to="/weddingnoida"
             className="bg-[#0B1C3E]  text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
@@ -411,7 +416,7 @@ const ReunionParty = () => {
           >
             Wedding Planner in Gurgaon
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Weddingcontact />

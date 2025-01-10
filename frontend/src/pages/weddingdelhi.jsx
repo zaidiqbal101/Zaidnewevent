@@ -12,20 +12,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What wedding services does Aryan Events offer?",
+    "Can Aryan Events create a custom theme for my wedding?",
+    "How can I book my wedding with Aryan Events?",
+    "Do you offer catering services for weddings?",
+    "What is the average cost of a wedding celebration?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers full-service wedding planning, including venue decoration, catering, entertainment, floral arrangements, photography, and personalized wedding themes. We take care of every detail to make your big day unforgettable, ensuring everything goes smoothly from start to finish.",
+    
+    "Yes, we specialize in creating custom wedding themes that suit your vision. Whether you want a traditional ceremony, a modern celebration, or a themed wedding, we work with you to bring your ideas to life, from décor to ambiance and everything in between.",
+    
+    "Booking your wedding with Aryan Events is easy! Simply contact us through our website or by phone to discuss your wedding details. We will help you choose the best venue, customize your wedding theme, and select the services that align with your preferences.",
+    
+    "Yes, we offer catering services for weddings, with a range of menu options that can be tailored to your taste. Whether you’re looking for a formal multi-course meal or a buffet, we ensure the catering is aligned with your theme and meets your guests' preferences.",
+    
+    "The cost of hosting a wedding depends on factors like the number of guests, venue, catering, and additional services like entertainment, photography, and décor. Aryan Events offers packages that can be customized to fit various budgets. Contact us for a personalized quote based on your wedding needs."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">

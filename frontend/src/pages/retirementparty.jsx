@@ -17,20 +17,25 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How much does a wedding planner cost in Gaya?",
-    "What are the services offered by a wedding planner?",
-    "What things do you need to discuss with a wedding planner before hiring them?",
-    "When is the correct time to hire a wedding planner?",
-    "What are the responsibilities of destination wedding planners in Gaya?",
+    "What retirement party services does Aryan Events offer?",
+    "Can Aryan Events create a custom theme for my retirement party?",
+    "How can I book a retirement party with Aryan Events?",
+    "Do you offer catering services for retirement parties?",
+    "What is the average cost of a retirement party?"
   ];
-
+  
   const answers = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Aryan Events offers comprehensive event management services for retirement parties, including venue decoration, catering, entertainment, speeches, personalized retirement themes, and more. We ensure your event is memorable and celebrates the honoree’s career and achievements.",
+    
+    "Yes, we specialize in designing custom themes for retirement parties! Whether you want a formal celebration, a casual gathering, or a theme that reflects the honoree’s career, we take care of every detail to ensure a unique and personalized experience.",
+    
+    "Booking your retirement party with Aryan Events is easy! Simply contact us via our website or phone to discuss your party’s theme and requirements. We will help you select a package that suits your needs and confirm the details of your celebration.",
+    
+    "Yes, we provide catering services for retirement parties, offering a wide range of menu options. Whether you prefer a sit-down dinner, a buffet, or cocktail-style catering, we can tailor the menu to suit the theme and preferences of your event.",
+    
+    "The cost of a retirement party depends on factors like the number of guests, venue, catering, entertainment, and other services you choose. Aryan Events offers packages that can be customized to fit your budget. Please reach out for a personalized quote based on your event details."
   ];
+  
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg mt-12">
@@ -398,7 +403,7 @@ const RetirementParty = () => {
         </section>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center gap-4 mt-14">
+        {/* <div className="flex justify-center gap-4 mt-14">
           <Link
             to="/weddingnoida"
             className="bg-[#0B1C3E]  text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-rose-800 transition duration-300"
@@ -411,7 +416,7 @@ const RetirementParty = () => {
           >
             Wedding Planner in Gurgaon
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Weddingcontact />
