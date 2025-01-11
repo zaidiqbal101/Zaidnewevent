@@ -8,10 +8,10 @@ import Gallery from "../pages/gallery";
 import BlogPage from "../pages/BlogPage";
 import BlogArticle1 from "../pages/blogarticle1";
 import ContactPage from "../pages/ContactPage";
-import WeddingDelhi from "../pages/weddingdelhi";
+import WeddingGaya from "../pages/weddinggaya";
 import WeddingNoida from "../pages/weddingnoida";
 import WeddingGurgaon from "../pages/weddinggurgaon";
-import Birthdaydelhi from "../pages/birthdaydelhi";
+import BirthdayGaya from "../pages/birthdaygaya";
 import Birthdaygurgaon from "../pages/birthdaygurgaon";
 import Birthdaynoida from "../pages/birthdaynoida";
 // import Anniversary from "../pages/servicesanniversary";
@@ -34,10 +34,10 @@ const AppRoute = () => {
         <Route path="/blog/birthday-planner" element={<BlogArticle1 />} /> 
         <Route path="/vlogPage" element={<BlogPage />} /> 
         <Route path="/ContactPage" element={<ContactPage />} /> 
-        <Route path="/weddingdelhi" element={<WeddingDelhi />} />
+        <Route path="/weddinggaya" element={<WeddingGaya />} />
         <Route path="/weddingnoida" element={<WeddingNoida />} />
         <Route path="/weddinggurgaon" element={<WeddingGurgaon />} />
-        <Route path="/birthdaydelhi"  element={<Birthdaydelhi/>} /> 
+        <Route path="/birthdaygaya"  element={<BirthdayGaya/>} /> 
         <Route path="/birthdaygurgaon"  element={<Birthdaygurgaon/>} /> 
         <Route path="/birthdaynoida" element={<Birthdaynoida/>}/>
         <Route path="/servicesanniversary" element={<ServicesAnniversary/>}/>

@@ -32,11 +32,11 @@ const Header = () => {
     { name: "About", href: "/aboutus" },
     {
       name: "Wedding",
-      dropdown: [{ name: "Wedding Planners in Gaya", href: "/weddingdelhi" }],
+      dropdown: [{ name: "Wedding Planners in Gaya", href: "/weddinggaya" }],
     },
     {
       name: "Birthday",
-      dropdown: [{ name: "Birthday Party Planner in Gaya", href: "/birthdaydelhi" }],
+      dropdown: [{ name: "Birthday Party Planner in Gaya", href: "/birthdaygaya" }],
     },
     {
       name: "Services",

@@ -80,7 +80,7 @@ const Faq = () => {
   );
 };
 
-const BirthdayDelhi = () => {
+const BirthdayGaya = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -426,4 +426,4 @@ const BirthdayDelhi = () => {
   );
 };
 
-export default BirthdayDelhi;
+export default BirthdayGaya;

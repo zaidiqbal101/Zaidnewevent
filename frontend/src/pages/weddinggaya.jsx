@@ -75,7 +75,7 @@ const Faq = () => {
   );
 };
 
-const WeddingDelhi = () => {
+const WeddingGaya = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setloading] = useState(false)
@@ -427,4 +427,4 @@ const WeddingDelhi = () => {
   );
 };
 
-export default WeddingDelhi;
+export default WeddingGaya;
