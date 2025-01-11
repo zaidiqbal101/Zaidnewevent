@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronDownIcon, MenuIcon, XIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const menuRef = useRef(null);
 
-  // Only used for mobile menu
+  // Toggle dropdown for mobile menu
   const toggleDropdown = (name) => {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
@@ -14,14 +15,15 @@ const Header = () => {
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(".mobile-menu")) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
+        setActiveDropdown(null);
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -57,26 +59,26 @@ const Header = () => {
     <header className="bg-[#11244A] text-white philosopher-regular z-50 relative">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div>
-          <Link to="/">
-            <img
-              src="/assets/Aryan-Event-Logo.png"
-              alt="Aryan Events Logo"
-              className="h-16"
-            />
-          </Link>
-        </div>
+        <Link to="/">
+          <img
+            src="/assets/Aryan-Event-Logo.png"
+            alt="Aryan Events Logo"
+            className="h-16"
+          />
+        </Link>
 
         {/* Mobile menu toggle button */}
         <button
           className="block lg:hidden text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
         </button>
 
-        {/* Sidebar for small screens */}
+        {/* Mobile menu */}
         <div
+          ref={menuRef}
           className={`fixed top-0 left-0 w-64 h-full bg-[#11244A] text-white z-50 transform transition-transform mobile-menu ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } lg:hidden`}
@@ -93,7 +95,7 @@ const Header = () => {
                 {link.dropdown ? (
                   <>
                     <button
-                      className="flex items-center w-full text-left hover:text-yellow-400 "
+                      className="flex items-center w-full text-left hover:text-yellow-400"
                       onClick={() => toggleDropdown(link.name)}
                     >
                       <span>{link.name}</span>
@@ -105,20 +107,20 @@ const Header = () => {
                       }`}
                     >
                       {link.dropdown.map((sublink, subIdx) => (
-                        <a
+                        <Link
                           key={subIdx}
-                          href={sublink.href}
+                          to={sublink.href}
                           className="block py-1 hover:text-yellow-400"
                         >
                           {sublink.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </>
                 ) : (
-                  <a href={link.href} className="block hover:text-yellow-400">
+                  <Link to={link.href} className="block hover:text-yellow-400">
                     {link.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
@@ -126,7 +128,7 @@ const Header = () => {
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden lg:flex lg:items-center lg:space-x-6 ">
+        <nav className="hidden lg:flex lg:items-center lg:space-x-6">
           {links.map((link, idx) => (
             <div key={idx} className="relative group">
               {link.dropdown ? (
@@ -137,20 +139,20 @@ const Header = () => {
                   </button>
                   <div className="absolute left-0 mt-2 bg-white text-gray-700 shadow-lg rounded-lg w-56 invisible peer-hover:visible hover:visible transition-all duration-300 opacity-0 peer-hover:opacity-100 hover:opacity-100">
                     {link.dropdown.map((sublink, subIdx) => (
-                      <a
+                      <Link
                         key={subIdx}
-                        href={sublink.href}
+                        to={sublink.href}
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
                         {sublink.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               ) : (
-                <a href={link.href} className="hover:text-yellow-400 block">
+                <Link to={link.href} className="hover:text-yellow-400 block">
                   {link.name}
-                </a>
+                </Link>
               )}
             </div>
           ))}

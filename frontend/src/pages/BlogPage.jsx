@@ -57,8 +57,8 @@ const BlogPage = () => {
   return (
     <div className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl text-rose-900 font-bold mb-4 text-center">OUR BLOGS</h2>
-        <h3 className="text-xl text-rose-900 font-semibold mb-8 text-center">
+        <h2 className="text-6xl text-[#12244A] philosopher-bold mb-4 text-center">OUR BLOGS</h2>
+        <h3 className="text-2xl text-[#12244A] philosopher-regular mb-8 text-center">
           Explore Our Latest Blogs
         </h3>
 

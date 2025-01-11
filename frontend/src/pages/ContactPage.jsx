@@ -3,6 +3,7 @@ import axios from 'axios';
 import ConfettiExplosion from './partyBomb';
 import Loader from './Loader'
 import { triggerConfetti } from './partyBomb';
+import ToastifyNotification, { showToast } from './ToastifyNotification';
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,6 +18,10 @@ const ContactPage = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [responseMessage, setResponseMessage] = useState('');
+  const handleSuccess = () => {
+    showToast("Operation successful!", "success");
+  };
+
 
   const eventTypes = [
     'Birthday', 'Anniversary', 'Wedding', 'Kitty Party',
@@ -64,7 +69,8 @@ const ContactPage = () => {
     setResponseMessage('');
 
     try {
-      const response = await axios.post('http://localhost:1200/submit', formData);
+
+      const response = await axios.post(`${process.env.REACT_APP_URL}/submit`, formData);
       console.log('Success:', response.data);
       setFormData({
         name: '',
@@ -76,7 +82,8 @@ const ContactPage = () => {
         message: '',
         isRobot: false,
       });
-      setResponseMessage(response.data.message || 'Form submitted successfully!');
+      handleSuccess(); // Show success message using ToastifyNotification
+      // setResponseMessage(response.data.message || 'Form submitted successfully!');
     } catch (error) {
       console.error('Error:', error);
       setResponseMessage('Something went wrong. Please try again later.');
@@ -89,10 +96,11 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-[#0B1C3E] flex flex-wrap">
      {/* Left Side Content */}
+     <ToastifyNotification/>
       {loading && <Loader/>}
       <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-12 text-white flex justify-center items-center">
         <div className="text-left">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-yellow-400 font-semibold mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-6xl bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent philosopher-bold mb-6">
             Let's Talk About Your Event
           </h1>
           <p className="mb-8 text-sm sm:text-base lg:text-lg text-white">

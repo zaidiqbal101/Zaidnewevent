@@ -128,7 +128,7 @@ const ServiceAnniversary = () => {
     event.preventDefault();
     console.log(formData); // Handle form submission logic here
     setIsModalOpen(false);
-    const response = axios.post("http://localhost:1200/saveFormData", formData);
+    const response = axios.post(`${process.env.REACT_APP_URL}/saveFormData`, formData);
     response
       .then((response) => {
         console.log("Success:", response.data);
@@ -139,11 +139,11 @@ const ServiceAnniversary = () => {
       });
   };
   return (
-    <div className="bg-[#0B1C3E] text-white py-12">
+    <div className="bg-[#162d5d] text-white py-12">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl font-bold mb-6 leading-snug">
+          <h1 className="text-6xl font-bold mb-6 philosopher-bold bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent leading-snug">
             Anniversary Celebration <br />
             {/* Planners in Gaya  */}
           </h1>
@@ -268,7 +268,7 @@ const ServiceAnniversary = () => {
         <section className="bg-white text-gray-800 py-10">
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold text-[#0B1C3E] mb-4">
+              <h2 className="text-6xl font-bold text-[#0B1C3E] mb-4 philosopher-bold">
                 Best Anniversary Planner in Gaya: Making Every Moment Magical
               </h2>
 
@@ -313,7 +313,7 @@ const ServiceAnniversary = () => {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h2 className="text-3xl font-bold text-[#0B1C3E] mb-4">
+              <h2 className="text-6xl font-bold text-[#0B1C3E] mb-4 philosopher-bold">
               Why Aryan Events is Your Trusted Anniversary Planner in Gaya
               </h2>
               <p className="mb-4 leading-relaxed">
@@ -344,10 +344,10 @@ const ServiceAnniversary = () => {
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-[#0B1C3E] mb-6">
+            <h2 className="text-6xl font-bold text-[#0B1C3E] mb-6 philosopher-bold">
               End-to-End  Services: From Planning to Execution
             </h2>
-            <p className="text-gray-600 text-lg mb-12">
+            <p className="text-gray-600 text-xl mb-12 philosopher-regular">
               From comprehensive and meticulous planning to seamless and
               flawless execution, we’ve got you covered at every step of the
               process.
@@ -363,7 +363,7 @@ const ServiceAnniversary = () => {
                  <div className="flex justify-center">
                  <div className="text-4xl mb-4">{feature.icon}</div>
                  </div>
-                  <h3 className="text-xl font-semibold mb-4">
+                  <h3 className="text-2xl philosopher-regular font-semibold mb-4 bg-gradient-to-r from-[#d4af37] via-[#f8e45f] to-[#d4af37] bg-clip-text text-transparent">
                     {feature.title}
                   </h3>
                   <p className="text-sm leading-relaxed">
