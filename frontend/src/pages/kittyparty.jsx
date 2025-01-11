@@ -135,7 +135,7 @@ const KittyParty = () => {
     event.preventDefault();
     console.log(formData); // Handle form submission logic here
     setIsModalOpen(false);
-    const response = axios.post("http://localhost:1200/saveFormData", formData);
+    const response = axios.post(`${process.env.REACT_APP_URL}/saveFormData`, formData);
     response
       .then((response) => {
         console.log("Success:", response.data);

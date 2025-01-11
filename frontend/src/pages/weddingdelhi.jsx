@@ -139,7 +139,7 @@ const WeddingDelhi = () => {
     try {
       setloading(true)
       const response = await axios.post(
-        "http://localhost:1200/saveFormData",
+        `${process.env.REACT_APP_URL}/saveFormData`,
         formData
       );
       console.log("Success:", response.data);
