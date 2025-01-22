@@ -1,23 +1,36 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const BlogArticle1 = () => {
+
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+
+  const vlog = searchParams.get("vlog") || "";
+  const title = searchParams.get("title") || "";
+  const description = searchParams.get("description") || "";
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Image Section */}
-      <div className="mb-8">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/blogpage1.png`} // Adjust the path as needed
-          alt="Birthday Planner Decoration"
-          className="w-1/2 h-auto object-cover rounded-lg shadow-md mx-auto" // Reduced width to 50% of the container
-        />
+      <div className="mb-8 h-[50vh]">
+      <iframe
+                width="100%"
+                height="100%"
+                src={vlog}
+                title={title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="mb-4 rounded-2xl"
+              ></iframe>
       </div>
 
-      <h1 className="text-3xl font-bold mb-4">Hire a Birthday Planner for Birthday Decorations</h1>
+      <h1 className="text-3xl font-bold mb-4">{title}</h1>
       <p className="text-lg text-gray-600 mb-6">
-        Planning a birthday party is no small feat, especially when it comes to creating the perfect decorations that set the tone for the celebration. If you’re in Gurgaon, hiring a professional birthday planner can make all the difference in transforming your special day into a stress-free and memorable event.
+      {description}
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Choose Birthday Planner for Birthday Decoration in Gurgaon</h2>
+      {/* <h2 className="text-2xl font-semibold mb-4">Choose Birthday Planner for Birthday Decoration in Gurgaon</h2>
       <p className="text-lg text-gray-600 mb-6">
         Here’s why choosing a birthday planner for your decorations in Gurgaon is a smart move:
       </p>
@@ -66,7 +79,7 @@ const BlogArticle1 = () => {
 
       <p className="text-lg text-gray-600 mb-6">
         Make your next birthday unforgettable—connect with a birthday planner today!
-      </p>
+      </p> */}
     </div>
   );
 };
