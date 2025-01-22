@@ -11,6 +11,7 @@ const BlogPage = () => {
       image: "blogpage1.png",
       slug: "birthday-planner",
       url: "https://youtu.be/vLD0ltGhvrY?si=PS3tfZf3hXf97Awr", // Unique slug for the blog
+      image : "/assets/aboutus.png"
     },
     {
       title: "Top Reasons Why You Should Hire a Professional",
@@ -20,6 +21,7 @@ const BlogPage = () => {
       image: "blogpage2.png",
       slug: "birthday-planner", // Unique slug for the blog
       url: "https://youtu.be/Ek-2VWEvQkQ?si=9QIr8CXHZvqrmqxB",
+        image : "/assets/alumuni.jpg"
     },
     {
       title: "Simple Anniversary Decoration Ideas at Home",
@@ -29,6 +31,7 @@ const BlogPage = () => {
       image: "blogpage3.png",
       slug: "birthday-planner", // Unique slug for the blog
       url: "https://youtu.be/pHl_MjgPiZo?si=B_aybdVlQMg7prRH", // Unique slug for the blog
+        image : "/assets/alumuni02.jpg"
     },
   ];
 
@@ -92,10 +95,10 @@ const BlogPage = () => {
           {updatedBlogs.map((blog) => (
             <Link
               key={blog.title}
-              to={`/blog/${blog.slug}?vlog=${blog.url}&&title=${blog.title}&&description=${blog.description}`} // Redirect to blog article page based on the slug
+              to={`/blog/${blog.slug}?vlog=${blog.image}&&title=${blog.title}&&description=${blog.description}`} // Redirect to blog article page based on the slug
               className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105"
             >
-              <iframe
+              {/* <iframe
                 width="100%"
                 height="200"
                 src={blog.url}
@@ -104,7 +107,12 @@ const BlogPage = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="mb-4"
-              ></iframe>
+              ></iframe> */}
+              <img
+                className="object-cover w-full rounded-lg"
+                src={`${blog.image}`}
+                alt={blog.title} // Replace with actual image file name if available in the /images folder
+              />
               <div className="p-4">
                 <h4 className="text-xl font-semibold mb-2">{blog.title}</h4>
                 <p className="text-gray-600">{blog.description}</p>

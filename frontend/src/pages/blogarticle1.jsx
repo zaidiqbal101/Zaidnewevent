@@ -12,17 +12,12 @@ const BlogArticle1 = () => {
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Image Section */}
-      <div className="mb-8 h-[50vh]">
-      <iframe
-                width="100%"
-                height="100%"
-                src={vlog}
-                title={title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="mb-4 rounded-2xl"
-              ></iframe>
+      <div className="mb-8 w-3/5 mx-auto">
+      <img
+                className="object-cover w-full rounded-lg"
+                src={`${vlog}`}
+                alt={title} // Replace with actual image file name if available in the /images folder
+              />
       </div>
 
       <h1 className="text-3xl font-bold mb-4">{title}</h1>
